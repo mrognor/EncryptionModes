@@ -6,7 +6,7 @@ function main() {
     canvas.width = document.getElementById('main-container').offsetWidth;
 
     // Create canvas context
-    var canvasContext = canvas.getContext("2d");
+    var canvasContext = canvas.getContext("2d", { willReadFrequently: true });
     canvasContext.beginPath();
     canvasContext.strokeStyle = "white";
     canvasContext.fillStyle = "white";
@@ -20,9 +20,7 @@ function main() {
 
     // Desktop
     function startDrawing() {
-        var image = new Image();
-        image.src = canvas.toDataURL();
-        previousCanvases.push(image);
+        previousCanvases.push(canvasContext.getImageData(0, 0, canvas.width, canvas.height));
 
         isPainting = true;
         canvasContext.beginPath();
@@ -47,9 +45,7 @@ function main() {
 
     // Mobile
     function handleStart(event) {
-        var image = new Image();
-        image.src = canvas.toDataURL();
-        previousCanvases.push(image);
+        previousCanvases.push(canvasContext.getImageData(0, 0, canvas.width, canvas.height));
 
         event.preventDefault();
 
@@ -160,7 +156,7 @@ function main() {
         if (previousCanvases.length > 0)
         {
             canvasContext.clearRect(0,0,canvas.width, canvas.height);
-            canvasContext.drawImage(previousCanvases[previousCanvases.length - 1], 0, 0);
+            canvasContext.putImageData(previousCanvases[previousCanvases.length - 1], 0, 0);
             previousCanvases.pop();
         }
     }
