@@ -9,13 +9,16 @@ function main() {
     var canvasContext = canvas.getContext("2d");
     canvasContext.beginPath();
     canvasContext.strokeStyle = "white";
+    canvasContext.fillStyle = "white";
     canvasContext.closePath();
 
     var isPainting = false;
-    var drawSize = 10;
-    var drawSizeLabel = document.getElementById('draw-size-label');
+    var drawWidth = 10;
+    var drawWidthLabel = document.getElementById('draw-width-label');
     var previousCanvases = [];
+    var ongoingTouches = [];
 
+    // Desktop
     function startDrawing() {
         var image = new Image();
         image.src = canvas.toDataURL();
@@ -34,7 +37,7 @@ function main() {
         if(!isPainting) return;
 
         // Line style
-        canvasContext.lineWidth = drawSize;
+        canvasContext.lineWidth = drawWidth;
         canvasContext.lineCap = "round";
         
         // Draw line
@@ -42,12 +45,96 @@ function main() {
         canvasContext.stroke(); 
     }
 
+    // Mobile
+    function handleStart(event) {
+        var image = new Image();
+        image.src = canvas.toDataURL();
+        previousCanvases.push(image);
+
+        event.preventDefault();
+
+        var touches = event.changedTouches;
+
+        for (var i = 0; i < touches.length; i++) {
+            ongoingTouches.push(copyTouch(touches[i]));
+            canvasContext.beginPath();
+            canvasContext.arc(touches[i].pageX - canvas.offsetLeft, touches[i].pageY - canvas.offsetTop, 4, 0, 2 * Math.PI, false); // a circle at the start
+            canvasContext.fill();
+        }
+    }
+
+    function handleMove(event) {
+        event.preventDefault();
+
+        var touches = event.changedTouches;
+      
+        for (var i = 0; i < touches.length; i++) {
+            var idx = ongoingTouchIndexById(touches[i].identifier);
+        
+            if (idx >= 0) {
+                canvasContext.beginPath();
+                canvasContext.lineWidth = drawWidth;
+                canvasContext.lineCap = "round";
+                canvasContext.moveTo(ongoingTouches[idx].pageX - canvas.offsetLeft, ongoingTouches[idx].pageY - canvas.offsetTop);
+                canvasContext.lineTo(touches[i].pageX - canvas.offsetLeft, touches[i].pageY - canvas.offsetTop);
+                canvasContext.stroke();
+                ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // swap in the new touch record
+            }
+        }
+    }
+
+    function handleEnd(event) {
+        event.preventDefault();
+
+        var touches = event.changedTouches;
+      
+        for (var i = 0; i < touches.length; i++) {
+            var idx = ongoingTouchIndexById(touches[i].identifier);
+      
+            if (idx >= 0) {
+                canvasContext.beginPath();
+                canvasContext.moveTo(ongoingTouches[idx].pageX - canvas.offsetLeft, ongoingTouches[idx].pageY - canvas.offsetTop);
+                canvasContext.lineTo(touches[i].pageX - canvas.offsetLeft, touches[i].pageY - canvas.offsetTop);
+                ongoingTouches.splice(idx, 1); // remove it; we're done
+            }
+        }
+    }
+
+    function handleCancel(event) {
+        event.preventDefault();
+
+        var touches = event.changedTouches;
+      
+        for (var i = 0; i < touches.length; i++) {
+            var idx = ongoingTouchIndexById(touches[i].identifier);
+            ongoingTouches.splice(idx, 1); // remove it; we're done
+        }
+    }
+
+    function copyTouch({ identifier, pageX, pageY }) {
+        return { identifier, pageX, pageY };
+    }
+
+    function ongoingTouchIndexById(idToFind) {
+        for (var i = 0; i < ongoingTouches.length; i++) {
+            var id = ongoingTouches[i].identifier;
+      
+            if (id == idToFind) {
+                return i;
+            }
+        }
+        return -1; // not found
+    }
+
+
+    // Common functions
     function setBackgroundColor(event) {
         canvas.style.background = event.target.value;
     }
 
     function setDrawColor(event) {
         canvasContext.strokeStyle = event.target.value;
+        canvasContext.fillStyle = event.target.value;
     }
 
     function clear() {
@@ -55,16 +142,16 @@ function main() {
     }
 
     function increase() {
-        if (drawSize < 25) {
-            drawSize += 5;
-            drawSizeLabel.innerHTML = "Размер курсора: " + drawSize;
+        if (drawWidth < 25) {
+            drawWidth += 5;
+            drawWidthLabel.innerHTML = "Размер курсора: " + drawWidth;
         }
     }
 
     function decrease() {
-        if (drawSize > 5) {
-            drawSize -= 5;
-            drawSizeLabel.innerHTML = "Размер курсора: " + drawSize;
+        if (drawWidth > 5) {
+            drawWidth -= 5;
+            drawWidthLabel.innerHTML = "Размер курсора: " + drawWidth;
         }
     }
 
@@ -80,8 +167,13 @@ function main() {
 
     // Add listeners
     canvas.addEventListener('mousedown', startDrawing);  
-    canvas.addEventListener('mouseup',stopDrawing);  
-    canvas.addEventListener('mousemove',draw);
+    canvas.addEventListener('mouseup', stopDrawing);  
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('touchstart', handleStart);
+    canvas.addEventListener('touchend', handleEnd);
+    canvas.addEventListener('touchcancel', handleCancel);
+    canvas.addEventListener('touchmove', handleMove);
+
     document.getElementById('background-color-picker').addEventListener('input', setBackgroundColor);
     document.getElementById('draw-color-picker').addEventListener('input', setDrawColor);
     document.getElementById('clear-button').addEventListener('click', clear);
