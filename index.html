@@ -15,12 +15,13 @@
 
 	<!-- Include site functions -->
 	<script src="functions.js"></script>
+	<script src="aes.js"></script>
 </head> 
 
 <body onload="main();">
 	<!-- Include bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
+
     <!-- Main container -->
 	<div class="container" id="main-container">
 
@@ -40,6 +41,11 @@
         <button type="button" class="btn btn-primary" id="decrease-button">Уменьшить</button>
         <button type="button" class="btn btn-primary" id="undo-button">Назад</button>
         ctrl + Z работает
+        <button type="button" class="btn btn-primary" id="ecb-button">Зашифровать</button>
+        ecb
+        <canvas id="ecb-canvas"></canvas>
+        cbc
+        <canvas id="cbc-canvas"></canvas>
 	</div>
 </body>
 </html>

@@ -1,17 +1,34 @@
 function main() {
-    // Create canvas
+    // Canvas
     var canvas = document.getElementById('canvas');
     canvas.style.background = "black";
     canvas.height = window.innerHeight - (window.innerHeight / 2);
     canvas.width = document.getElementById('main-container').offsetWidth;
 
-    // Create canvas context
     var canvasContext = canvas.getContext("2d", { willReadFrequently: true });
     canvasContext.beginPath();
     canvasContext.strokeStyle = "white";
     canvasContext.fillStyle = "white";
     canvasContext.closePath();
 
+    // Ecb canvas
+    var ecbCanvas = document.getElementById('ecb-canvas');
+    ecbCanvas.style.background = "black";
+    ecbCanvas.height = window.innerHeight - (window.innerHeight / 2);
+    ecbCanvas.width = document.getElementById('main-container').offsetWidth;
+    
+    var ecbCanvasContext = ecbCanvas.getContext("2d", { willReadFrequently: true });
+
+    // Cbc canvas
+    var cbcCanvas = document.getElementById('cbc-canvas');
+    cbcCanvas.style.background = "black";
+    cbcCanvas.height = window.innerHeight - (window.innerHeight / 2);
+    cbcCanvas.width = document.getElementById('main-container').offsetWidth;
+    
+    var cbcCanvasContext = cbcCanvas.getContext("2d", { willReadFrequently: true });
+
+
+    // Variables
     var isPainting = false;
     var drawWidth = 10;
     var drawWidthLabel = document.getElementById('draw-width-label');
@@ -161,6 +178,34 @@ function main() {
         }
     }
 
+    function encrypt() {
+        // An example 128-bit key
+        var key = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
+        // Ecb encryption
+        var imgd = canvasContext.getImageData(0, 0, ecbCanvas.width, ecbCanvas.height);
+        var pix = imgd.data;
+
+        var aesEcb = new aesjs.ModeOfOperation.ecb(key);
+        var encryptedBytes = aesEcb.encrypt(pix);
+        
+        for (var i = 0, n = pix.length; i < n; i += 1) {
+            pix[i] = encryptedBytes[i];
+        }
+
+        ecbCanvasContext.putImageData(imgd, 0, 0);
+
+        // Cbc encryption
+        var aesCbc = new aesjs.ModeOfOperation.cbc(key);
+        var encryptedBytes = aesCbc.encrypt(pix);
+        
+        for (var i = 0, n = pix.length; i < n; i += 1) {
+            pix[i] = encryptedBytes[i];
+        }
+
+        cbcCanvasContext.putImageData(imgd, 0, 0);
+    }
+
     // Add listeners
     canvas.addEventListener('mousedown', startDrawing);  
     canvas.addEventListener('mouseup', stopDrawing);  
@@ -177,4 +222,5 @@ function main() {
     document.getElementById('decrease-button').addEventListener('click', decrease);
     document.getElementById('undo-button').addEventListener('click', undo);
     document.addEventListener('keydown', function(event) { if (event.ctrlKey && event.key === 'z') { undo(); }});
+    document.getElementById('ecb-button').addEventListener('click', encrypt);
 }
