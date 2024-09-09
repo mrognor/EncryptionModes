@@ -178,6 +178,18 @@ function main() {
         }
     }
 
+    function fill_empty_pixels(pix) {
+        const hex = canvas.style.background;
+        for (var i = 0, n = pix.length; i < n; i += 4) {
+            if (pix[i + 3] == 0) {
+                pix[i] = parseInt(hex.substring(1, 3), 16);
+                pix[i + 1] = parseInt(hex.substring(3, 5), 16);
+                pix[i + 2] = parseInt(hex.substring(5, 7), 16);
+                pix[i + 3] = 255;
+            }
+        }
+    }
+
     function encrypt() {
         // An example 128-bit key
         var key = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
@@ -185,6 +197,7 @@ function main() {
         // Ecb encryption
         var imgd = canvasContext.getImageData(0, 0, ecbCanvas.width, ecbCanvas.height);
         var pix = imgd.data;
+        fill_empty_pixels(pix);
 
         var aesEcb = new aesjs.ModeOfOperation.ecb(key);
         var encryptedBytes = aesEcb.encrypt(pix);
@@ -198,7 +211,7 @@ function main() {
         // Cbc encryption
         var aesCbc = new aesjs.ModeOfOperation.cbc(key);
         var encryptedBytes = aesCbc.encrypt(pix);
-        
+
         for (var i = 0, n = pix.length; i < n; i += 1) {
             pix[i] = encryptedBytes[i];
         }
