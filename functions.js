@@ -14,7 +14,7 @@ function main() {
     // Ecb canvas
     var ecbCanvas = document.getElementById('ecb-canvas');
     ecbCanvas.style.background = "black";
-    ecbCanvas.height = window.innerHeight - (window.innerHeight / 2);
+    ecbCanvas.height = window.innerHeight - (window.innerHeight / 2) ;
     ecbCanvas.width = document.getElementById('main-container').offsetWidth;
     
     var ecbCanvasContext = ecbCanvas.getContext("2d", { willReadFrequently: true });
@@ -31,9 +31,11 @@ function main() {
     // Variables
     var isPainting = false;
     var drawWidth = 10;
+    var drawColor = "white";
     var drawWidthLabel = document.getElementById('draw-width-label');
-    var previousCanvases = [];
     var ongoingTouches = [];
+    var previousCanvases = [];
+    var isEraserActive = false;
 
     // Desktop
     function startDrawing() {
@@ -172,12 +174,26 @@ function main() {
     {
         if (previousCanvases.length > 0)
         {
-            canvasContext.clearRect(0,0,canvas.width, canvas.height);
+            canvasContext.clearRect(0, 0, canvas.width, canvas.height);
             canvasContext.putImageData(previousCanvases[previousCanvases.length - 1], 0, 0);
             previousCanvases.pop();
         }
     }
 
+    function toggleEraser() {
+        if (isEraserActive) {
+            canvasContext.globalCompositeOperation = "destination-over";
+            canvasContext.strokeStyle = drawColor;
+            isEraserActive = false;
+        } else {
+            canvasContext.globalCompositeOperation = "destination-out";  
+            canvasContext.strokeStyle  = "rgba(255,255,255,1)";
+            drawColor = canvasContext.fillStyle;
+            isEraserActive = true;
+        }
+    }
+
+    // Encrryption
     function fill_empty_pixels(pix) {
         const hex = canvas.style.background;
         for (var i = 0, n = pix.length; i < n; i += 4) {
@@ -236,4 +252,5 @@ function main() {
     document.getElementById('undo-button').addEventListener('click', undo);
     document.addEventListener('keydown', function(event) { if (event.ctrlKey && event.key === 'z') { undo(); }});
     document.getElementById('ecb-button').addEventListener('click', encrypt);
+    document.getElementById('eraser-checkbox').addEventListener('change', toggleEraser);
 }
