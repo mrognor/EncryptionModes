@@ -193,6 +193,16 @@ function main() {
         }
     }
 
+    function loadFile(event) {
+        var URL = window.webkitURL || window.URL;
+	    var url = URL.createObjectURL(event.target.files[0]);
+	    var img = new Image();
+	    img.src = url;
+	    img.onload = function() {
+		    canvasContext.drawImage(img, 0, 0, canvas.width, canvas.height);
+	    }
+    }
+
     // Encrryption
     function fill_empty_pixels(pix) {
         const hex = canvas.style.background;
@@ -253,4 +263,5 @@ function main() {
     document.addEventListener('keydown', function(event) { if (event.ctrlKey && event.key === 'z') { undo(); }});
     document.getElementById('ecb-button').addEventListener('click', encrypt);
     document.getElementById('eraser-checkbox').addEventListener('change', toggleEraser);
+    document.getElementById('file-button').addEventListener('change', loadFile);
 }
