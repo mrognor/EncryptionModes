@@ -1,3 +1,12 @@
+/**
+    Разработано Аммаевым Тимуром в 2024 году.
+    Я c++ разработчик, а не веб разработчик, но волею судеб я умею в веб(я так думаю:)).
+    Если вы веб разработчик и считаете, что я сделал фигню, то не судите строго.
+    Я постарался сделать для вас красиво и удобно, т.е. с темной темой и кроссплатформенно).
+    Не знаю как у вас дела, но надеюсь все хорошо.
+    Удачи вам!
+*/
+
 function main() {
     // Canvas
     var canvas = document.getElementById('canvas');
@@ -27,7 +36,6 @@ function main() {
     
     var cbcCanvasContext = cbcCanvas.getContext("2d", { willReadFrequently: true });
 
-
     // Variables
     var isPainting = false;
     var drawWidth = 10;
@@ -36,6 +44,17 @@ function main() {
     var ongoingTouches = [];
     var previousCanvases = [];
     var isEraserActive = false;
+
+    // Load image from local storage
+    const savedImage = localStorage.getItem("image");
+    console.log(savedImage);
+    if (savedImage !== null) {
+        var img = new Image();
+	    img.src = savedImage;
+        img.onload = function() {
+		    canvasContext.drawImage(img, 0, 0);
+	    }
+    }
 
     // Desktop
     function startDrawing() {
@@ -264,4 +283,12 @@ function main() {
     document.getElementById('ecb-button').addEventListener('click', encrypt);
     document.getElementById('eraser-checkbox').addEventListener('change', toggleEraser);
     document.getElementById('file-button').addEventListener('change', loadFile);
+}
+
+function close() {
+    if (window.localStorage.getItem('image') !== null) {
+        window.localStorage.removeItem('image');
+        var canvas = document.getElementById('canvas');
+        window.localStorage.setItem('image', canvas.toDataURL());
+    }
 }
