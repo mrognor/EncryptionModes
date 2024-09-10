@@ -52,7 +52,7 @@ function main() {
         var img = new Image();
 	    img.src = savedImage;
         img.onload = function() {
-		    canvasContext.drawImage(img, 0, 0);
+		    canvasContext.drawImage(img, 0, 0, canvas.width, canvas.height);
 	    }
     }
 
@@ -288,7 +288,13 @@ function main() {
 function close() {
     if (window.localStorage.getItem('image') !== null) {
         window.localStorage.removeItem('image');
-        var canvas = document.getElementById('canvas');
-        window.localStorage.setItem('image', canvas.toDataURL());
     }
+    var canvas = document.getElementById('canvas');
+    window.localStorage.setItem('image', canvas.toDataURL());
+}
+
+function resize() {
+    close();
+    document.querySelector('body').outerHTML = document.querySelector('body').outerHTML;
+    main();
 }
