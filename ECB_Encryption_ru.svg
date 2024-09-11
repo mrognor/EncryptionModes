@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" style="fill:none;stroke:#000;stroke-width: 2px" width="1010" height="315">
+	<title>Шифрование в режиме электронной кодовой книги</title>
+	<style type="text/css">
+	text {text-anchor:middle; stroke:none;fill:#ffffff; font-family: Helvetica; font-size: 22px;}
+	.arrow {marker-end: url(#cap);}
+	path {stroke:white}
+	rect {stroke:white}
+	</style>
+	<defs>
+		<marker id="cap" orient="auto" markerWidth="25" markerHeight="14" refY="3">
+			<path style="stroke:none;fill:white;" d="m 0 0 v 6 l 9 -3 z"/>
+		</marker>
+	</defs>
+
+	<g id="stage">
+		<text x="213" y="39">Открытый текст</text>
+		<path id="cells" d="M 108 50 h 210 v 30 h -210 z m 30 0 v 30 m 30 0 v -30 m 30 0 v 30 m 30 0 v -30 m 30 0 v 30 m 30 0 v -30 m 30 0 v 30"/>
+		<path class="arrow" d="M 213 80 v 20"/>
+
+		<text x="56" y="137">Ключ</text>
+		<path class="arrow" d="M 30 148 h 60"/>
+
+		<rect x="108" y="118" width="210" height="60"/>
+		<text x="213" y="144">Процедура</text>
+		<text x="213" y="167">шифрования</text>
+		<path class="arrow" d="M 213 178 v 20"/>
+
+		<use xlink:href="#cells" y="166"/>
+		<text x="213" y="272">Зашифрованный</text>
+		<text x="213" y="295">текст</text>
+	</g>
+
+	<use xlink:href="#stage" x="330" />
+	<use xlink:href="#stage" x="660" />
+</svg>
