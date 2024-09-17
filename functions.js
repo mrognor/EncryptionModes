@@ -81,6 +81,12 @@ function main() {
         canvasContext.stroke(); 
     }
 
+    function drawOver(event) {
+        if ((event.buttons & 1) !== 1) {
+            stopDrawing();
+        }
+    }
+
     // Mobile
     function handleStart(event) {
         previousCanvases.push(canvasContext.getImageData(0, 0, canvas.width, canvas.height));
@@ -169,6 +175,7 @@ function main() {
     function setDrawColor(event) {
         canvasContext.strokeStyle = event.target.value;
         canvasContext.fillStyle = event.target.value;
+        drawColor = event.target.value;
     }
 
     function clear() {
@@ -321,6 +328,8 @@ function main() {
     canvas.addEventListener('mousedown', startDrawing);  
     canvas.addEventListener('mouseup', stopDrawing);  
     canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseover', drawOver);
+
     canvas.addEventListener('touchstart', handleStart);
     canvas.addEventListener('touchend', handleEnd);
     canvas.addEventListener('touchcancel', handleCancel);
