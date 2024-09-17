@@ -264,7 +264,60 @@ function main() {
         cbcCanvasContext.putImageData(imgd, 0, 0);
     }
 
-    // Add listeners
+    // Tasks
+    function focusHexInput(event) {
+        var elem = event.target;
+
+        if (elem.value.startsWith("0x")) {
+            elem.value = elem.value.slice(2);
+        }
+    }
+
+    function verifyHexInput(event) {
+        var elem = event.target;
+
+        if (elem.value.match(/[^0-9a-fA-F\-\+\(\)]/g)) {
+            elem.value = elem.value.replace(/[^0-9a-fA-F\-\+\(\)]/g, '');
+        }
+
+        elem.value = elem.value.toUpperCase();
+
+        var num = elem.id.substring(elem.id.lastIndexOf("b") + 1);
+        num++;
+        if (elem.value.length >= 2 && num < 4) {
+            var nextElem = document.getElementById('ecb-task-data-b' + num);
+            if (nextElem.value.length == 0) {
+                nextElem.focus();
+            }
+        }
+    }
+
+    function addHexPrefix(event) {
+        var elem = event.target;
+        console.log(elem.value);
+        if (elem.value.length == 1) {
+            elem.value = "0x0" + elem.value;
+        } else if (elem.value.length == 2) {
+            elem.value = "0x" + elem.value;
+        }
+    }
+
+    function ecbTask() {
+        var elem1 = document.getElementById('ecb-task-data-b0');
+        var elem2 = document.getElementById('ecb-task-data-b1');
+        var elem3 = document.getElementById('ecb-task-data-b2');
+        var elem4 = document.getElementById('ecb-task-data-b3');
+
+
+        for (var i = 0; i < 16; i += 4) {
+            document.getElementById('key-' + i).innerHTML = elem1.value.slice(2);
+            document.getElementById('key-' + (i + 1)).innerHTML = elem2.value.slice(2);
+            document.getElementById('key-' + (i + 2)).innerHTML = elem3.value.slice(2);
+            document.getElementById('key-' + (i + 3)).innerHTML = elem4.value.slice(2);
+        }
+    }
+
+    // Add canvas listeners
     canvas.addEventListener('mousedown', startDrawing);  
     canvas.addEventListener('mouseup', stopDrawing);  
     canvas.addEventListener('mousemove', draw);
@@ -273,6 +326,7 @@ function main() {
     canvas.addEventListener('touchcancel', handleCancel);
     canvas.addEventListener('touchmove', handleMove);
 
+    // Add other listeners
     document.getElementById('background-color-picker').addEventListener('input', setBackgroundColor);
     document.getElementById('draw-color-picker').addEventListener('input', setDrawColor);
     document.getElementById('clear-button').addEventListener('click', clear);
@@ -283,6 +337,14 @@ function main() {
     document.getElementById('ecb-button').addEventListener('click', encrypt);
     document.getElementById('eraser-checkbox').addEventListener('change', toggleEraser);
     document.getElementById('file-button').addEventListener('change', loadFile);
+
+    // Add task listeners
+    for (var i = 0; i < 4; i++) {
+        document.getElementById('ecb-task-data-b' + i).addEventListener('focus', focusHexInput);
+        document.getElementById('ecb-task-data-b' + i).addEventListener('input', verifyHexInput);
+        document.getElementById('ecb-task-data-b' + i).addEventListener('blur', addHexPrefix);
+    }
+    document.getElementById('ecb-task-button').addEventListener('click', ecbTask);
 }
 
 function close() {
