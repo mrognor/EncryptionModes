@@ -29,11 +29,28 @@
 
             <canvas id="canvas"></canvas>
 
-            Фон
-            <input type="color" class="form-control form-control-color" id="background-color-picker" value="#000000" title="Choose your color" autocompleted="">
+            <div class="row">
+                <div class="col">
+                    Фон
+                    <input type="color" class="form-control form-control-color" id="background-color-picker" value="#000000" title="Choose your color" autocompleted="">
 
-            Курсор
-            <input type="color" class="form-control form-control-color" id="draw-color-picker" value="#ffffff" title="Choose your color" autocompleted="">
+                </div>
+                <div class="col">
+                    Курсор
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn" style="background-color: #ffffff;" onclick="setDrawColorFromButton('#ffffff')"></button>
+                        <button type="button" class="btn" style="background-color: #000000;" onclick="setDrawColorFromButton('#000000')"></button>
+                        <button type="button" class="btn" style="background-color: #ff0000;" onclick="setDrawColorFromButton('#ff0000')"></button>
+                        <button type="button" class="btn" style="background-color: #ffa500;" onclick="setDrawColorFromButton('#ffa500')"></button>
+                        <button type="button" class="btn" style="background-color: #faeb36;" onclick="setDrawColorFromButton('#faeb36')"></button>
+                        <button type="button" class="btn" style="background-color: #79c314;" onclick="setDrawColorFromButton('#79c314')"></button>
+                        <button type="button" class="btn" style="background-color: #487de7;" onclick="setDrawColorFromButton('#487de7')"></button>
+                        <button type="button" class="btn" style="background-color: #4b369d;" onclick="setDrawColorFromButton('#4b369d')"></button>
+                        <button type="button" class="btn" style="background-color: #70369d;" onclick="setDrawColorFromButton('#70369d')"></button>
+                    </div>
+                    <input type="color" class="form-control form-control-color" id="draw-color-picker" value="#ffffff" title="Choose your color" autocompleted="">
+                </div>
+            </div>
 
             <button type="button" class="btn btn-primary" id="clear-button">Очистить</button>
             <button type="button" class="btn btn-primary" id="increase-button">Увеличить</button>

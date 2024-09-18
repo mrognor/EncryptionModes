@@ -7,39 +7,46 @@
     Удачи вам!
 */
 
+var canvas;
+var canvasContext;
+var ecbCanvas;
+var ecbCanvasContext;
+var cbcCanvas;
+var cbcCanvasContext;
+var drawColor = "white";
+
 function main() {
     // Canvas
-    var canvas = document.getElementById('canvas');
+    canvas = document.getElementById('canvas');
     canvas.style.background = "black";
     canvas.height = window.innerHeight - (window.innerHeight / 2);
     canvas.width = document.getElementById('main-container').offsetWidth;
 
-    var canvasContext = canvas.getContext("2d", { willReadFrequently: true });
+    canvasContext = canvas.getContext("2d", { willReadFrequently: true });
     canvasContext.beginPath();
     canvasContext.strokeStyle = "white";
     canvasContext.fillStyle = "white";
     canvasContext.closePath();
 
     // Ecb canvas
-    var ecbCanvas = document.getElementById('ecb-canvas');
+    ecbCanvas = document.getElementById('ecb-canvas');
     ecbCanvas.style.background = "black";
     ecbCanvas.height = window.innerHeight - (window.innerHeight / 2) ;
     ecbCanvas.width = document.getElementById('main-container').offsetWidth;
     
-    var ecbCanvasContext = ecbCanvas.getContext("2d", { willReadFrequently: true });
+    ecbCanvasContext = ecbCanvas.getContext("2d", { willReadFrequently: true });
 
     // Cbc canvas
-    var cbcCanvas = document.getElementById('cbc-canvas');
+    cbcCanvas = document.getElementById('cbc-canvas');
     cbcCanvas.style.background = "black";
     cbcCanvas.height = window.innerHeight - (window.innerHeight / 2);
     cbcCanvas.width = document.getElementById('main-container').offsetWidth;
     
-    var cbcCanvasContext = cbcCanvas.getContext("2d", { willReadFrequently: true });
+    cbcCanvasContext = cbcCanvas.getContext("2d", { willReadFrequently: true });
 
     // Variables
     var isPainting = false;
     var drawWidth = 10;
-    var drawColor = "white";
     var drawWidthLabel = document.getElementById('draw-width-label');
     var ongoingTouches = [];
     var previousCanvases = [];
@@ -356,11 +363,18 @@ function main() {
     document.getElementById('ecb-task-button').addEventListener('click', ecbTask);
 }
 
+function setDrawColorFromButton(color) {
+    console.log(color);
+    console.log(canvasContext.strokeStyle)
+    canvasContext.strokeStyle = color;
+    canvasContext.fillStyle = color;
+    drawColor = color;
+}
+
 function close() {
     if (window.localStorage.getItem('image') !== null) {
         window.localStorage.removeItem('image');
     }
-    var canvas = document.getElementById('canvas');
     window.localStorage.setItem('image', canvas.toDataURL());
 }
 
