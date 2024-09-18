@@ -366,6 +366,6 @@ function close() {
 
 function resize() {
     close();
-    document.querySelector('body').outerHTML = document.querySelector('body').outerHTML;
+    document.getElementById('canvas-container').outerHTML = document.getElementById('canvas-container').outerHTML;
     main();
 }
