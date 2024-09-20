@@ -294,7 +294,7 @@ function main() {
             elem.value = elem.value.replace(/[^0-9a-fA-F\-\+\(\)]/g, '');
         }
 
-        elem.value = elem.value.toUpperCase();
+        elem.value = elem.value.toLowerCase();
 
         var num = elem.id.substring(elem.id.lastIndexOf("b") + 1);
         num++;
