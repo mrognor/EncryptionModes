@@ -14,11 +14,12 @@
 	<link href="style.css" rel="stylesheet">
 
 	<!-- Include site functions -->
-	<script src="functions.js"></script>
+	<script src="canvasFunctions.js"></script>
+    <script src="taskFunctions.js"></script>
 	<script src="aes.js"></script>
 </head> 
 
-<body onload="main();" onbeforeunload="close();" onresize="resize();">
+<body onload="loadTasks(); loadCanvas();" onbeforeunload="closeCanvas();" onresize="resizeCanvas();">
 	<!-- Include bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -27,41 +28,41 @@
         <div class="container" id="canvas-container">
             <h1> Нарисуйте что-нибудь</h1>
 
-            <canvas id="canvas"></canvas>
+            <canvas id="main-canvas"></canvas>
 
             <div class="row">
                 <div class="col">
                     Фон
-                    <input type="color" class="form-control form-control-color" id="background-color-picker" value="#000000" title="Choose your color" autocompleted="">
+                    <input type="color" class="form-control form-control-color" value="#000000" title="Choose your color" autocompleted="" oninput="setBackgroundColor(event);">
 
                 </div>
                 <div class="col">
                     Курсор
                     <div class="btn-group" role="group">
-                        <button type="button" class="btn" style="background-color: #ffffff;" onclick="setDrawColorFromButton('#ffffff')"></button>
-                        <button type="button" class="btn" style="background-color: #000000;" onclick="setDrawColorFromButton('#000000')"></button>
-                        <button type="button" class="btn" style="background-color: #ff0000;" onclick="setDrawColorFromButton('#ff0000')"></button>
-                        <button type="button" class="btn" style="background-color: #ffa500;" onclick="setDrawColorFromButton('#ffa500')"></button>
-                        <button type="button" class="btn" style="background-color: #faeb36;" onclick="setDrawColorFromButton('#faeb36')"></button>
-                        <button type="button" class="btn" style="background-color: #79c314;" onclick="setDrawColorFromButton('#79c314')"></button>
-                        <button type="button" class="btn" style="background-color: #487de7;" onclick="setDrawColorFromButton('#487de7')"></button>
-                        <button type="button" class="btn" style="background-color: #4b369d;" onclick="setDrawColorFromButton('#4b369d')"></button>
-                        <button type="button" class="btn" style="background-color: #70369d;" onclick="setDrawColorFromButton('#70369d')"></button>
+                        <button type="button" class="btn" style="background-color: #ffffff;" onclick="setPenColorFromButton('#ffffff')"></button>
+                        <button type="button" class="btn" style="background-color: #000000;" onclick="setPenColorFromButton('#000000')"></button>
+                        <button type="button" class="btn" style="background-color: #ff0000;" onclick="setPenColorFromButton('#ff0000')"></button>
+                        <button type="button" class="btn" style="background-color: #ffa500;" onclick="setPenColorFromButton('#ffa500')"></button>
+                        <button type="button" class="btn" style="background-color: #faeb36;" onclick="setPenColorFromButton('#faeb36')"></button>
+                        <button type="button" class="btn" style="background-color: #79c314;" onclick="setPenColorFromButton('#79c314')"></button>
+                        <button type="button" class="btn" style="background-color: #487de7;" onclick="setPenColorFromButton('#487de7')"></button>
+                        <button type="button" class="btn" style="background-color: #4b369d;" onclick="setPenColorFromButton('#4b369d')"></button>
+                        <button type="button" class="btn" style="background-color: #70369d;" onclick="setPenColorFromButton('#70369d')"></button>
                     </div>
-                    <input type="color" class="form-control form-control-color" id="draw-color-picker" value="#ffffff" title="Choose your color" autocompleted="">
+                    <input type="color" class="form-control form-control-color" value="#ffffff" title="Choose your color" autocompleted="" oninput="setPenColor(event);">
                 </div>
             </div>
 
-            <button type="button" class="btn btn-primary" id="clear-button">Очистить</button>
-            <button type="button" class="btn btn-primary" id="increase-button">Увеличить</button>
-            <label id="draw-width-label">Размер курсора: 10</label>
-            <button type="button" class="btn btn-primary" id="decrease-button">Уменьшить</button>
-            <button type="button" class="btn btn-primary" id="undo-button">Назад</button>
+            <button type="button" class="btn btn-primary" onclick="clearCanvas();">Очистить</button>
+            <button type="button" class="btn btn-primary" onclick="increasePenWidth();">Увеличить</button>
+            <label id="pen-width-label">Размер курсора: 10</label>
+            <button type="button" class="btn btn-primary" onclick="decreasePenWidth();">Уменьшить</button>
+            <button type="button" class="btn btn-primary" onclick="undoCanvas();">Назад</button>
             ctrl + Z работает
             <button type="button" class="btn btn-primary" id="ecb-button">Зашифровать</button>
-            <input type="checkbox" class="btn-check" id="eraser-checkbox" autocomplete="off">
-            <label class="btn btn-primary" for="eraser-checkbox">Ластик</label>
-            <input type="file" id="file-button">
+            <input type="checkbox" class="btn-check" autocomplete="off" id="canvas-eraser-checkbox" onchange="toggleEraser();">
+            <label class="btn btn-primary" for="canvas-eraser-checkbox">Ластик</label>
+            <input type="file" onchange="loadFileToCanvas(event);">
             ecb
             <canvas id="ecb-canvas"></canvas>
             cbc
