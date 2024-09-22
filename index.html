@@ -32,24 +32,43 @@
 
             <div class="row">
                 <div class="col">
-                    Фон
-                    <input type="color" class="form-control form-control-color" value="#000000" title="Choose your color" autocompleted="" oninput="setBackgroundColor(event);">
-
+                    <div class="row">
+                        <div class="col">
+                            <div class="dropdown">
+                                <button class="btn" id="canvas-background-color-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="showBackgroundColorPicker(1)">
+                                    Цвет фона
+                                </button>
+                                <input type="color" style="visibility: hidden" value="#000000" autocompleted="" id="canvas-background-color-picker" oninput="setBackgroundColor(event);">
+                                <ul class="dropdown-menu"> </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col">
-                    Курсор
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn" style="background-color: #ffffff;" onclick="setPenColorFromButton('#ffffff')"></button>
-                        <button type="button" class="btn" style="background-color: #000000;" onclick="setPenColorFromButton('#000000')"></button>
-                        <button type="button" class="btn" style="background-color: #ff0000;" onclick="setPenColorFromButton('#ff0000')"></button>
-                        <button type="button" class="btn" style="background-color: #ffa500;" onclick="setPenColorFromButton('#ffa500')"></button>
-                        <button type="button" class="btn" style="background-color: #faeb36;" onclick="setPenColorFromButton('#faeb36')"></button>
-                        <button type="button" class="btn" style="background-color: #79c314;" onclick="setPenColorFromButton('#79c314')"></button>
-                        <button type="button" class="btn" style="background-color: #487de7;" onclick="setPenColorFromButton('#487de7')"></button>
-                        <button type="button" class="btn" style="background-color: #4b369d;" onclick="setPenColorFromButton('#4b369d')"></button>
-                        <button type="button" class="btn" style="background-color: #70369d;" onclick="setPenColorFromButton('#70369d')"></button>
+                    <div class="row">
+                        <div class="col">
+                            <div class="dropdown">
+                                <button class="btn" id="canvas-pen-color-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="showBackgroundColorPicker(2)">
+                                    Цвет курсора
+                                </button>
+                                <input type="color" style="visibility: hidden" value="#000000" autocompleted="" id="canvas-pen-color-picker" oninput="setPenColor(event);">
+                                <ul class="dropdown-menu"> </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn" style="background-color: #ffffff;" onclick="setPenColorFromButton('#ffffff')"></button>
+                                <button type="button" class="btn" style="background-color: #000000;" onclick="setPenColorFromButton('#000000')"></button>
+                                <button type="button" class="btn" style="background-color: #ff0000;" onclick="setPenColorFromButton('#ff0000')"></button>
+                                <button type="button" class="btn" style="background-color: #ffa500;" onclick="setPenColorFromButton('#ffa500')"></button>
+                                <button type="button" class="btn" style="background-color: #faeb36;" onclick="setPenColorFromButton('#faeb36')"></button>
+                                <button type="button" class="btn" style="background-color: #79c314;" onclick="setPenColorFromButton('#79c314')"></button>
+                                <button type="button" class="btn" style="background-color: #487de7;" onclick="setPenColorFromButton('#487de7')"></button>
+                                <button type="button" class="btn" style="background-color: #4b369d;" onclick="setPenColorFromButton('#4b369d')"></button>
+                                <button type="button" class="btn" style="background-color: #70369d;" onclick="setPenColorFromButton('#70369d')"></button>
+                            </div>
+                        </div>
                     </div>
-                    <input type="color" class="form-control form-control-color" value="#ffffff" title="Choose your color" autocompleted="" oninput="setPenColor(event);">
                 </div>
             </div>
 

@@ -148,12 +148,16 @@ function loadCanvas() {
 
 function setBackgroundColor(event) {
     mainCanvas.style.background = event.target.value;
+
+    document.getElementById('canvas-background-color-button').style = "background-color:" + event.target.value;
 }
 
 function setPenColor(event) {
     canvasContext.strokeStyle = event.target.value;
     canvasContext.fillStyle = event.target.value;
     penColor = event.target.value;
+
+    document.getElementById('canvas-pen-color-button').style = "background-color:" + penColor;
 }
 
 function setPenColorFromButton(color) {
@@ -162,6 +166,8 @@ function setPenColorFromButton(color) {
     canvasContext.strokeStyle = color;
     canvasContext.fillStyle = color;
     penColor = color;
+
+    document.getElementById('canvas-pen-color-button').style = "background-color:" + penColor;
 }
 
 function clearCanvas() {
@@ -216,6 +222,17 @@ function loadFileToCanvas(event) {
     img.onload = function() {
         canvasContext.drawImage(img, 0, 0, mainCanvas.width, mainCanvas.height);
     }
+}
+
+function showBackgroundColorPicker(elemIndex) {
+    var picker;
+    if (elemIndex == 1) {
+        picker = document.getElementById('canvas-background-color-picker');
+    } else if (elemIndex == 2) {
+        picker = document.getElementById('canvas-pen-color-picker');
+    }
+
+    picker.click();
 }
 
 function closeCanvas() {
