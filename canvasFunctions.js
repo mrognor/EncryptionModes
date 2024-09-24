@@ -8,11 +8,12 @@ var previousCanvases = [];
 var penColor = "white";
 var penWidth = 10;
 var isEraserActive = false;
+var backgroundColor = "black";
 
 function loadCanvas() {
     // Main canvas
     mainCanvas = document.getElementById('main-canvas');
-    mainCanvas.style.background = "black";
+    mainCanvas.style.background = backgroundColor;
     mainCanvas.height = window.innerHeight - (window.innerHeight / 2);
     mainCanvas.width = document.getElementById('main-container').offsetWidth;
 
@@ -39,6 +40,9 @@ function loadCanvas() {
     cbcCanvas.width = document.getElementById('main-container').offsetWidth;
     
     cbcCanvasContext = cbcCanvas.getContext("2d", { willReadFrequently: true });
+
+    document.getElementById('canvas-background-color-button').style="background-color: " + backgroundColor+ ";";
+    document.getElementById('canvas-pen-color-button').style="background-color: " + penColor + ";";
 
     // Drawing variables
     var isDraw = false;
@@ -68,7 +72,6 @@ function loadCanvas() {
         isDraw = false;
 
         if (!isMoved) {
-            console.log("Z");
             canvasContext.arc(event.pageX - mainCanvas.offsetLeft, event.pageY - mainCanvas.offsetTop, 2, 0, 2 * Math.PI);
             canvasContext.stroke();
         }
@@ -148,7 +151,7 @@ function loadCanvas() {
 
 function setBackgroundColor(event) {
     mainCanvas.style.background = event.target.value;
-
+    backgroundColor = event.target.value;
     document.getElementById('canvas-background-color-button').style = "background-color:" + event.target.value;
 }
 
@@ -201,7 +204,6 @@ function undoCanvas()
 }
 
 function toggleEraser() {
-    console.log("Z");
     if (isEraserActive) {
         canvasContext.globalCompositeOperation = "destination-over";
         canvasContext.strokeStyle = drawColor;
