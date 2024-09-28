@@ -6,7 +6,7 @@ var cbcCanvas;
 var cbcCanvasContext;
 var previousCanvases = [];
 var lastCanvasImage;
-var isFirstCanvasLoad = false;
+var isFirstCanvasLoad = true;
 var penColor = "white";
 var penWidth = 10;
 var isEraserActive = false;
@@ -60,14 +60,16 @@ function loadCanvas() {
     var img = new Image();
 
     if (isFirstCanvasLoad) {
-        img.src = lastCanvasImage;
-    } else {
         img.src = savedImage;
         lastCanvasImage = savedImage;
-        isFirstCanvasLoad = true;
+        isFirstCanvasLoad = false;
+    } else {
+        if (lastCanvasImage !== null) {
+            img.src = lastCanvasImage;
+        }
     }
 
-    if (savedImage !== null && lastCanvasImage !== null) {
+    if (savedImage !== null || lastCanvasImage !== null) {
         img.onload = function() {
             canvasContext.drawImage(img, 0, 0, mainCanvas.width, mainCanvas.height);
         }
@@ -143,6 +145,7 @@ function setPenColorFromButton(color) {
 
 function clearCanvas() {
     canvasContext.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+    lastCanvasImage = null;
 }
 
 function increasePenWidth() {
@@ -193,7 +196,7 @@ function encryptCanvas() {
     fillEmptyPixels(pix);
 
     var aesEcb = new aesjs.ModeOfOperation.ecb(key);
-    var encryptedBytes = aesEcb.encrypt(pix);
+    var encryptedBytes = aesEcb.encrypt(aesjs.padding.pkcs7.pad(pix));
     
     for (var i = 0, n = pix.length; i < n; i += 1) {
         pix[i] = encryptedBytes[i];
@@ -203,7 +206,7 @@ function encryptCanvas() {
 
     // Cbc encryption
     var aesCbc = new aesjs.ModeOfOperation.cbc(key);
-    var encryptedBytes = aesCbc.encrypt(pix);
+    var encryptedBytes = aesCbc.encrypt(aesjs.padding.pkcs7.pad(pix));
 
     for (var i = 0, n = pix.length; i < n; i += 1) {
         pix[i] = encryptedBytes[i];
@@ -233,6 +236,7 @@ function loadFileToCanvas(event) {
     img.onload = function() {
         canvasContext.drawImage(img, 0, 0, mainCanvas.width, mainCanvas.height);
     }
+    lastCanvasImage = url;
 }
 
 function showBackgroundColorPicker(elemIndex) {
