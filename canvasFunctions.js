@@ -10,6 +10,8 @@ var penWidth = 10;
 var isEraserActive = false;
 var backgroundColor = "black";
 
+document.addEventListener('keydown', function(event) { if (event.ctrlKey && event.key === 'z') { undoCanvas(); }});
+
 function loadCanvas() {
     // Main canvas
     mainCanvas = document.getElementById('main-canvas');
@@ -141,12 +143,10 @@ function loadCanvas() {
     }
 
     // Add canvas listeners
-    mainCanvas.addEventListener('mousedown', startDrawing);  
-    mainCanvas.addEventListener('mouseup', stopDrawing);  
-    mainCanvas.addEventListener('mousemove', draw);
-    mainCanvas.addEventListener('mouseover', drawOver);
-    document.addEventListener('keydown', function(event) { if (event.ctrlKey && event.key === 'z') { undoCanvas(); }});
-    document.getElementById('ecb-button').addEventListener('click', encryptCanvas);
+    mainCanvas.onmousedown = startDrawing;  
+    mainCanvas.onmouseup = stopDrawing;  
+    mainCanvas.onmousemove = draw;
+    mainCanvas.onmouseover = drawOver;
 }
 
 function setBackgroundColor(event) {
@@ -245,7 +245,5 @@ function closeCanvas() {
 }
 
 function resizeCanvas() {
-    closeCanvas();
-    document.getElementById('canvas-container').outerHTML = document.getElementById('canvas-container').outerHTML;
     loadCanvas();
 }
