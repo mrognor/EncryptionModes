@@ -11,15 +11,19 @@ var penColor = "white";
 var penWidth = 10;
 var isEraserActive = false;
 var backgroundColor = "black";
+var mainContainerPadding = 30;
 
 document.addEventListener('keydown', function(event) { if (event.ctrlKey && event.key === 'z') { undoCanvas(); }});
 
 function loadCanvas() {
+    // Main container
+    document.getElementById('main-container').style = "padding: 0px " + mainContainerPadding + "px;";
+
     // Main canvas
     mainCanvas = document.getElementById('main-canvas');
     mainCanvas.style.background = backgroundColor;
     mainCanvas.height = window.innerHeight - (window.innerHeight / 2);
-    mainCanvas.width = document.getElementById('main-container').offsetWidth;
+    mainCanvas.width = document.getElementById('main-container').offsetWidth - 2 * mainContainerPadding;
 
     canvasContext = mainCanvas.getContext("2d", { willReadFrequently: true });
     canvasContext.beginPath();
@@ -33,7 +37,7 @@ function loadCanvas() {
     ecbCanvas = document.getElementById('ecb-canvas');
     ecbCanvas.style.background = "black";
     ecbCanvas.height = window.innerHeight - (window.innerHeight / 2) ;
-    ecbCanvas.width = document.getElementById('main-container').offsetWidth;
+    ecbCanvas.width = document.getElementById('main-container').offsetWidth - 2 * mainContainerPadding;
     
     ecbCanvasContext = ecbCanvas.getContext("2d", { willReadFrequently: true });
 
@@ -41,7 +45,7 @@ function loadCanvas() {
     cbcCanvas = document.getElementById('cbc-canvas');
     cbcCanvas.style.background = "black";
     cbcCanvas.height = window.innerHeight - (window.innerHeight / 2);
-    cbcCanvas.width = document.getElementById('main-container').offsetWidth;
+    cbcCanvas.width = document.getElementById('main-container').offsetWidth - 2 * mainContainerPadding;
     
     cbcCanvasContext = cbcCanvas.getContext("2d", { willReadFrequently: true });
 
@@ -79,15 +83,14 @@ function loadCanvas() {
     }
 
     function stopDrawing(event) {
-        isDraw = false;
-        lastCanvasImage = mainCanvas.toDataURL();
-
-        if (!isMoved) {
+        if (!isMoved && isDraw) {
             canvasContext.arc(event.pageX - mainCanvas.offsetLeft, event.pageY - mainCanvas.offsetTop, 2, 0, 2 * Math.PI);
             canvasContext.stroke();
         }
 
         canvasContext.closePath();
+        isDraw = false;
+        lastCanvasImage = mainCanvas.toDataURL();
     }
 
     function draw(event) {
