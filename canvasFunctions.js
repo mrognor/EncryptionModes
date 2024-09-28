@@ -16,8 +16,10 @@ var mainContainerPadding = 30;
 document.addEventListener('keydown', function(event) { if (event.ctrlKey && event.key === 'z') { undoCanvas(); }});
 
 function loadCanvas() {
-    // Main container
+    // Styles
     document.getElementById('main-container').style = "padding: 0px " + mainContainerPadding + "px;";
+    document.getElementById('canvas-pen-color-button').style = "background-color:" + penColor + "; color:" + penColor + ";";
+    document.getElementById('canvas-background-color-button').style = "background-color:" + backgroundColor + "; color:" + backgroundColor + ";";
 
     // Main canvas
     mainCanvas = document.getElementById('main-canvas');
@@ -49,9 +51,6 @@ function loadCanvas() {
     
     cbcCanvasContext = cbcCanvas.getContext("2d", { willReadFrequently: true });
 
-    document.getElementById('canvas-background-color-button').style="background-color: " + backgroundColor+ ";";
-    document.getElementById('canvas-pen-color-button').style="background-color: " + penColor + ";";
-
     // Drawing variables
     var isDraw = false;
     var isMoved = false;
@@ -64,6 +63,7 @@ function loadCanvas() {
         img.src = lastCanvasImage;
     } else {
         img.src = savedImage;
+        lastCanvasImage = savedImage;
         isFirstCanvasLoad = true;
     }
 
@@ -122,7 +122,7 @@ function loadCanvas() {
 function setBackgroundColor(event) {
     mainCanvas.style.background = event.target.value;
     backgroundColor = event.target.value;
-    document.getElementById('canvas-background-color-button').style = "background-color:" + event.target.value;
+    document.getElementById('canvas-background-color-button').style = "background-color:" + backgroundColor + "; color:" + backgroundColor + ";";
 }
 
 function setPenColor(event) {
@@ -130,17 +130,15 @@ function setPenColor(event) {
     canvasContext.fillStyle = event.target.value;
     penColor = event.target.value;
 
-    document.getElementById('canvas-pen-color-button').style = "background-color:" + penColor;
+    document.getElementById('canvas-pen-color-button').style = "background-color:" + penColor + "; color:" + penColor + ";";
 }
 
 function setPenColorFromButton(color) {
-    console.log(color);
-    console.log(canvasContext.strokeStyle)
     canvasContext.strokeStyle = color;
     canvasContext.fillStyle = color;
     penColor = color;
 
-    document.getElementById('canvas-pen-color-button').style = "background-color:" + penColor;
+    document.getElementById('canvas-pen-color-button').style = "background-color:" + penColor + "; color:" + penColor + ";";
 }
 
 function clearCanvas() {

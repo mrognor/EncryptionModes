@@ -37,8 +37,8 @@
         <div class="row justify-content-evenly">
             <div class="col">
                 <div class="dropdown">
-                    <button class="btn w-100" title="Фон доски" style="color: green;" id="canvas-background-color-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="showBackgroundColorPicker(1)">
-                        Фон
+                    <button class="btn w-100" title="Фон доски" id="canvas-background-color-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="showBackgroundColorPicker(1)">
+                        <div class="invert-text-class">Фон</div>
                     </button>
                     <input type="color" style="visibility: hidden" value="#000000" autocompleted="" id="canvas-background-color-picker" oninput="setBackgroundColor(event);">
                     <ul class="dropdown-menu"> </ul>
@@ -47,7 +47,7 @@
             <div class="col">
                 <div class="dropdown">
                     <button class="btn w-100" title="Цвет кисти" id="canvas-pen-color-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="showBackgroundColorPicker(2)">
-                        Цвет
+                        <div class="invert-text-class">Цвет</div>
                     </button>
                     <input type="color" style="visibility: hidden" value="#000000" autocompleted="" id="canvas-pen-color-picker" oninput="setPenColor(event);">
                     <ul class="dropdown-menu"> </ul>
