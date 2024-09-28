@@ -5,6 +5,8 @@ var ecbCanvasContext;
 var cbcCanvas;
 var cbcCanvasContext;
 var previousCanvases = [];
+var lastCanvasImage;
+var isFirstCanvasLoad = false;
 var penColor = "white";
 var penWidth = 10;
 var isEraserActive = false;
@@ -51,11 +53,17 @@ function loadCanvas() {
     var isMoved = false;
 
     // Load image from local storage
-    const savedImage = localStorage.getItem("image");
+    var savedImage = localStorage.getItem("image");
+    var img = new Image();
 
-    if (savedImage !== null) {
-        var img = new Image();
+    if (isFirstCanvasLoad) {
+        img.src = lastCanvasImage;
+    } else {
         img.src = savedImage;
+        isFirstCanvasLoad = true;
+    }
+
+    if (savedImage !== null && lastCanvasImage !== null) {
         img.onload = function() {
             canvasContext.drawImage(img, 0, 0, mainCanvas.width, mainCanvas.height);
         }
@@ -72,6 +80,7 @@ function loadCanvas() {
 
     function stopDrawing(event) {
         isDraw = false;
+        lastCanvasImage = mainCanvas.toDataURL();
 
         if (!isMoved) {
             canvasContext.arc(event.pageX - mainCanvas.offsetLeft, event.pageY - mainCanvas.offsetTop, 2, 0, 2 * Math.PI);
@@ -98,48 +107,6 @@ function loadCanvas() {
         if ((event.buttons & 1) !== 1) {
             stopDrawing(event);
         }
-    }
-
-    // Canvas encryption functions
-    function fillEmptyPixels(pix) {
-        const hex = mainCanvas.style.background;
-        for (var i = 0, n = pix.length; i < n; i += 4) {
-            if (pix[i + 3] == 0) {
-                pix[i] = parseInt(hex.substring(1, 3), 16);
-                pix[i + 1] = parseInt(hex.substring(3, 5), 16);
-                pix[i + 2] = parseInt(hex.substring(5, 7), 16);
-                pix[i + 3] = 255;
-            }
-        }
-    }
-
-    function encryptCanvas() {
-        // An example 128-bit key
-        var key = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
-
-        // Ecb encryption
-        var imgd = canvasContext.getImageData(0, 0, ecbCanvas.width, ecbCanvas.height);
-        var pix = imgd.data;
-        fillEmptyPixels(pix);
-
-        var aesEcb = new aesjs.ModeOfOperation.ecb(key);
-        var encryptedBytes = aesEcb.encrypt(pix);
-        
-        for (var i = 0, n = pix.length; i < n; i += 1) {
-            pix[i] = encryptedBytes[i];
-        }
-
-        ecbCanvasContext.putImageData(imgd, 0, 0);
-
-        // Cbc encryption
-        var aesCbc = new aesjs.ModeOfOperation.cbc(key);
-        var encryptedBytes = aesCbc.encrypt(pix);
-
-        for (var i = 0, n = pix.length; i < n; i += 1) {
-            pix[i] = encryptedBytes[i];
-        }
-
-        cbcCanvasContext.putImageData(imgd, 0, 0);
     }
 
     // Add canvas listeners
@@ -181,7 +148,7 @@ function increasePenWidth() {
     if (penWidth < 25) {
         penWidth += 5;
         canvasContext.lineWidth = penWidth;
-        document.getElementById('pen-width-label').innerHTML = "Размер курсора: " + penWidth;
+        document.getElementById('pen-width-label').innerHTML = penWidth;
     }
 }
 
@@ -189,7 +156,7 @@ function decreasePenWidth() {
     if (penWidth > 5) {
         penWidth -= 5;
         canvasContext.lineWidth = penWidth;
-        document.getElementById('pen-width-label').innerHTML = "Размер курсора: " + penWidth;
+        document.getElementById('pen-width-label').innerHTML = penWidth;
     }
 }
 
@@ -201,6 +168,47 @@ function undoCanvas()
         canvasContext.putImageData(previousCanvases[previousCanvases.length - 1], 0, 0);
         previousCanvases.pop();
     }
+}
+
+function encryptCanvas() {
+    function fillEmptyPixels(pix) {
+        const hex = mainCanvas.style.background;
+        for (var i = 0, n = pix.length; i < n; i += 4) {
+            if (pix[i + 3] == 0) {
+                pix[i] = parseInt(hex.substring(1, 3), 16);
+                pix[i + 1] = parseInt(hex.substring(3, 5), 16);
+                pix[i + 2] = parseInt(hex.substring(5, 7), 16);
+                pix[i + 3] = 255;
+            }
+        }
+    }
+
+    // An example 128-bit key
+    var key = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
+    // Ecb encryption
+    var imgd = canvasContext.getImageData(0, 0, ecbCanvas.width, ecbCanvas.height);
+    var pix = imgd.data;
+    fillEmptyPixels(pix);
+
+    var aesEcb = new aesjs.ModeOfOperation.ecb(key);
+    var encryptedBytes = aesEcb.encrypt(pix);
+    
+    for (var i = 0, n = pix.length; i < n; i += 1) {
+        pix[i] = encryptedBytes[i];
+    }
+
+    ecbCanvasContext.putImageData(imgd, 0, 0);
+
+    // Cbc encryption
+    var aesCbc = new aesjs.ModeOfOperation.cbc(key);
+    var encryptedBytes = aesCbc.encrypt(pix);
+
+    for (var i = 0, n = pix.length; i < n; i += 1) {
+        pix[i] = encryptedBytes[i];
+    }
+
+    cbcCanvasContext.putImageData(imgd, 0, 0);
 }
 
 function toggleEraser() {
