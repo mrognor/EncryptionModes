@@ -225,6 +225,7 @@ function toggleEraser() {
         canvasContext.globalCompositeOperation = "destination-out";  
         canvasContext.strokeStyle  = "rgba(255,255,255,1)";
         isEraserActive = true;
+        mainCanvas.style.cursor =  "url('https://icons.getbootstrap.com/assets/icons/eraser-fill.svg'), auto";
     }
 }
 
