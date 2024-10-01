@@ -217,13 +217,13 @@ function encryptCanvas() {
 
 function toggleEraser() {
     if (isEraserActive) {
-        canvasContext.globalCompositeOperation = "destination-over";
-        canvasContext.strokeStyle = drawColor;
+        canvasContext.globalCompositeOperation = "source-over";
+        canvasContext.strokeStyle = penColor;
         isEraserActive = false;
+        mainCanvas.style.cursor = 'default';
     } else {
         canvasContext.globalCompositeOperation = "destination-out";  
         canvasContext.strokeStyle  = "rgba(255,255,255,1)";
-        drawColor = canvasContext.fillStyle;
         isEraserActive = true;
     }
 }
