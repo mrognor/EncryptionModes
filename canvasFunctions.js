@@ -12,6 +12,8 @@ var penWidth = 10;
 var isEraserActive = false;
 var backgroundColor = "black";
 var mainContainerPadding = 30;
+var minimalPenWidth = 5;
+var maximalPenWidth = 25;
 
 document.addEventListener('keydown', function(event) { if (event.ctrlKey && event.key === 'z') { undoCanvas(); }});
 
@@ -20,6 +22,20 @@ function loadCanvas() {
     document.getElementById('main-container').style = "padding: 0px " + mainContainerPadding + "px;";
     document.getElementById('canvas-pen-color-button').style = "background-color:" + penColor + "; color:" + penColor + ";";
     document.getElementById('canvas-background-color-button').style = "background-color:" + backgroundColor + "; color:" + backgroundColor + ";";
+
+    if (isFirstCanvasLoad) {
+        // Load old pen color
+        if (window.localStorage.getItem('penColor') !== null) {
+            penColor = window.localStorage.getItem('penColor');
+            document.getElementById('canvas-pen-color-button').style = "background-color:" + penColor + "; color:" + penColor + ";";
+        }
+
+        // Load background color
+        if (window.localStorage.getItem('backgroundColor') !== null) {
+            backgroundColor = window.localStorage.getItem('backgroundColor');
+            document.getElementById('canvas-background-color-button').style = "background-color:" + backgroundColor + "; color:" + backgroundColor + ";";
+        }
+    }
 
     // Main canvas
     mainCanvas = document.getElementById('main-canvas');
@@ -30,8 +46,8 @@ function loadCanvas() {
     canvasContext = mainCanvas.getContext("2d", { willReadFrequently: true });
     canvasContext.beginPath();
     canvasContext.lineWidth = penWidth;
-    canvasContext.strokeStyle = "white";
-    canvasContext.fillStyle = "white";
+    canvasContext.strokeStyle = penColor;
+    canvasContext.fillStyle = penColor;
     canvasContext.lineCap = "round";
     canvasContext.closePath();
 
@@ -62,7 +78,6 @@ function loadCanvas() {
     if (isFirstCanvasLoad) {
         img.src = savedImage;
         lastCanvasImage = savedImage;
-        isFirstCanvasLoad = false;
     } else {
         if (lastCanvasImage !== null) {
             img.src = lastCanvasImage;
@@ -119,6 +134,7 @@ function loadCanvas() {
     mainCanvas.onmouseup = stopDrawing;  
     mainCanvas.onmousemove = draw;
     mainCanvas.onmouseover = drawOver;
+    isFirstCanvasLoad = false;
 }
 
 function setBackgroundColor(event) {
@@ -149,18 +165,20 @@ function clearCanvas() {
 }
 
 function increasePenWidth() {
-    if (penWidth < 25) {
+    if (penWidth < maximalPenWidth) {
         penWidth += 5;
         canvasContext.lineWidth = penWidth;
         document.getElementById('pen-width-label').innerHTML = penWidth;
+        window.localStorage.setItem('penWidth', penWidth);
     }
 }
 
 function decreasePenWidth() {
-    if (penWidth > 5) {
+    if (penWidth > minimalPenWidth) {
         penWidth -= 5;
         canvasContext.lineWidth = penWidth;
         document.getElementById('pen-width-label').innerHTML = penWidth;
+        window.localStorage.setItem('penWidth', penWidth);
     }
 }
 
@@ -220,12 +238,12 @@ function toggleEraser() {
         canvasContext.globalCompositeOperation = "source-over";
         canvasContext.strokeStyle = penColor;
         isEraserActive = false;
-        mainCanvas.style.cursor = 'default';
+        mainCanvas.style.cursor = "url('https://icons.getbootstrap.com/assets/icons/pencil-fill.svg'), auto";;
     } else {
         canvasContext.globalCompositeOperation = "destination-out";  
         canvasContext.strokeStyle  = "rgba(255,255,255,1)";
         isEraserActive = true;
-        mainCanvas.style.cursor =  "url('https://icons.getbootstrap.com/assets/icons/eraser-fill.svg'), auto";
+        mainCanvas.style.cursor = "url('https://icons.getbootstrap.com/assets/icons/eraser-fill.svg'), auto";
     }
 }
 
@@ -256,6 +274,8 @@ function closeCanvas() {
         window.localStorage.removeItem('image');
     }
     window.localStorage.setItem('image', mainCanvas.toDataURL());
+    window.localStorage.setItem('penColor', penColor);
+    window.localStorage.setItem('backgroundColor', backgroundColor);
 }
 
 function resizeCanvas() {

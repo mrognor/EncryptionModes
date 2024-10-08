@@ -1,3 +1,7 @@
 .invert-text-class {
     filter: saturate(0) grayscale(1) brightness(.7) contrast(1000%) invert(1);
 }
+
+.main-canvas-listen-clear {
+    cursor: url("https://icons.getbootstrap.com/assets/icons/pencil-fill.svg"), auto;
+}
