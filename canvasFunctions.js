@@ -238,12 +238,12 @@ function toggleEraser() {
         canvasContext.globalCompositeOperation = "source-over";
         canvasContext.strokeStyle = penColor;
         isEraserActive = false;
-        mainCanvas.style.cursor = "url('https://icons.getbootstrap.com/assets/icons/pencil-fill.svg'), auto";;
+        mainCanvas.style.cursor = "pointer";
     } else {
         canvasContext.globalCompositeOperation = "destination-out";  
         canvasContext.strokeStyle  = "rgba(255,255,255,1)";
         isEraserActive = true;
-        mainCanvas.style.cursor = "url('https://icons.getbootstrap.com/assets/icons/eraser-fill.svg'), auto";
+        mainCanvas.style.cursor = "crosshair";
     }
 }
 
