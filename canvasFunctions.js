@@ -248,6 +248,10 @@ function toggleEraser() {
 }
 
 function loadFileToCanvas(event) {
+    if (event.target.files.length == 0) {
+        return;
+    }
+
     var URL = window.webkitURL || window.URL;
     var url = URL.createObjectURL(event.target.files[0]);
     var img = new Image();
@@ -255,7 +259,9 @@ function loadFileToCanvas(event) {
     img.onload = function() {
         canvasContext.drawImage(img, 0, 0, mainCanvas.width, mainCanvas.height);
     }
+
     lastCanvasImage = url;
+    document.getElementById('canvas-file-input').value = "";
 }
 
 function showBackgroundColorPicker(elemIndex) {
