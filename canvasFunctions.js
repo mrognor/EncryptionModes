@@ -252,15 +252,26 @@ function loadFileToCanvas(event) {
         return;
     }
 
+    previousCanvases.push(canvasContext.getImageData(0, 0, mainCanvas.width, mainCanvas.height));
+
     var URL = window.webkitURL || window.URL;
     var url = URL.createObjectURL(event.target.files[0]);
     var img = new Image();
     img.src = url;
     img.onload = function() {
-        canvasContext.drawImage(img, 0, 0, mainCanvas.width, mainCanvas.height);
+        if (mainCanvas.width > mainCanvas.height) {
+            var ratio = mainCanvas.height / img.height;
+            var imgWidth = img.width * ratio;
+            canvasContext.drawImage(img, (mainCanvas.width / 2) - (imgWidth / 2), 0, imgWidth, mainCanvas.height);
+        } else {
+            var ratio = mainCanvas.width / img.width;
+            var imgHeight = img.height * ratio;
+            canvasContext.drawImage(img, 0, (mainCanvas.height / 2) - (imgHeight / 2), mainCanvas.width, imgHeight);
+        }
+
+        lastCanvasImage = mainCanvas.toDataURL();
     }
 
-    lastCanvasImage = url;
     document.getElementById('canvas-file-input').value = "";
 }
 
