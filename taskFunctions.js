@@ -68,4 +68,64 @@ function loadTasks() {
         document.getElementById('ecb-task-data-b' + i).addEventListener('blur', addHexPrefix);
     }
     document.getElementById('ecb-task-button').addEventListener('click', ecbTask);
+
+    loadDataMatrixTask();
+}
+
+
+// Data matrix task
+var isGridHiden = false;
+var dataMatrixSize = 14;
+
+function loadDataMatrixTask() {
+    var taskHtml = "";
+    for (var i = 0; i < dataMatrixSize; ++i) {
+        taskHtml += '<div class="btn-group" role="group">';
+        for (var j = 0; j < dataMatrixSize; ++j) {
+            taskHtml += '<button type="button" class="dm-button" onclick="toggleDmButton(this)">' + (i * dataMatrixSize + j) + '</button>';
+        }
+        taskHtml += '</div>';
+    }
+    document.getElementById('dm-task').innerHTML = taskHtml;
+}
+
+function toggleDmButton(button) {
+    console.log(button);
+    console.log(button.style.background);
+    if (button.style.background == "" || button.style.background == "white") {
+        button.style.background = "black";
+        button.style.color = "white";   
+    } else {
+        button.style.background = "white";
+        button.style.color = "black";
+    }
+}
+
+function toggleDmGrid() {
+    var counter = 0;
+
+    Array.prototype.forEach.call(document.getElementsByClassName('dm-button'), el => {
+        if (isGridHiden) {
+            el.style.border = '1px outset black';
+            el.innerHTML = counter;
+        } else {
+            el.style.border = '0px outset black';
+            el.innerHTML = "";
+        }
+
+        counter += 1;
+    });
+
+    if (isGridHiden) {
+        isGridHiden = false;
+    } else {
+        isGridHiden = true;
+    }
+}
+
+function clearDm() {
+    Array.prototype.forEach.call(document.getElementsByClassName('dm-button'), el => {
+        el.style.background = 'white';
+        el.style.color = "black";
+    });
 }
