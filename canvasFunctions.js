@@ -206,7 +206,15 @@ function encryptCanvas() {
     }
 
     // An example 128-bit key
-    var key = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+    var key = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    for (var i = 0; i < 16; ++i) {
+        var elem = document.getElementById('canvas-data-input-' + i);
+        var byteValue = "00";
+        if (elem.value.startsWith("0x")) {
+            byteValue = elem.value.slice(2);
+        }
+        key[i] = parseInt(byteValue, 16);
+    }
 
     // Ecb encryption
     var imgd = canvasContext.getImageData(0, 0, ecbCanvas.width, ecbCanvas.height);

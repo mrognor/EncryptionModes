@@ -8,7 +8,7 @@
 */
 
 function loadTasks() {
-    // Tasks
+    // Byte input
     function focusHexInput(event) {
         var elem = event.target;
 
@@ -26,19 +26,20 @@ function loadTasks() {
 
         elem.value = elem.value.toLowerCase();
 
-        var num = elem.id.substring(elem.id.lastIndexOf("b") + 1);
-        num++;
-        if (elem.value.length >= 2 && num < 4) {
-            var nextElem = document.getElementById('ecb-task-data-b' + num);
-            if (nextElem.value.length == 0) {
-                nextElem.focus();
+        if (elem.value.length >= 2) {
+            var num = elem.id.substring(elem.id.lastIndexOf("-") + 1);
+            num++;
+            var nextElem = document.getElementById(elem.id.substring(0, elem.id.lastIndexOf("-") + 1) + num);
+            if (nextElem != null) {
+                if (nextElem.value.length == 0) {
+                    nextElem.focus();
+                }
             }
         }
     }
 
     function addHexPrefix(event) {
         var elem = event.target;
-        console.log(elem.value);
         if (elem.value.length == 1) {
             elem.value = "0x0" + elem.value;
         } else if (elem.value.length == 2) {
@@ -46,32 +47,31 @@ function loadTasks() {
         }
     }
 
-    function ecbTask() {
-        var elem1 = document.getElementById('ecb-task-data-b0');
-        var elem2 = document.getElementById('ecb-task-data-b1');
-        var elem3 = document.getElementById('ecb-task-data-b2');
-        var elem4 = document.getElementById('ecb-task-data-b3');
-
-
-        for (var i = 0; i < 16; i += 4) {
-            document.getElementById('key-' + i).innerHTML = elem1.value.slice(2);
-            document.getElementById('key-' + (i + 1)).innerHTML = elem2.value.slice(2);
-            document.getElementById('key-' + (i + 2)).innerHTML = elem3.value.slice(2);
-            document.getElementById('key-' + (i + 3)).innerHTML = elem4.value.slice(2);
-        }
-    }
-
-    // Add task listeners
-    for (var i = 0; i < 4; i++) {
-        document.getElementById('ecb-task-data-b' + i).addEventListener('focus', focusHexInput);
-        document.getElementById('ecb-task-data-b' + i).addEventListener('input', verifyHexInput);
-        document.getElementById('ecb-task-data-b' + i).addEventListener('blur', addHexPrefix);
-    }
-    document.getElementById('ecb-task-button').addEventListener('click', ecbTask);
+    // Add byte input listeners
+    Array.prototype.forEach.call(document.getElementsByClassName('byte-input'), el => {
+        el.addEventListener('focus', focusHexInput);
+        el.addEventListener('blur', addHexPrefix);
+        el.addEventListener('input', verifyHexInput);
+    });
 
     drawDataMatrixTask();
 }
 
+// Encryption tasks
+function ecbTask() {
+    var elem1 = document.getElementById('ecb-task-data-0');
+    var elem2 = document.getElementById('ecb-task-data-1');
+    var elem3 = document.getElementById('ecb-task-data-2');
+    var elem4 = document.getElementById('ecb-task-data-3');
+
+
+    for (var i = 0; i < 16; i += 4) {
+        document.getElementById('key-' + i).innerHTML = elem1.value.slice(2);
+        document.getElementById('key-' + (i + 1)).innerHTML = elem2.value.slice(2);
+        document.getElementById('key-' + (i + 2)).innerHTML = elem3.value.slice(2);
+        document.getElementById('key-' + (i + 3)).innerHTML = elem4.value.slice(2);
+    }
+}
 
 // Data matrix task
 var isGridHiden = false;
@@ -105,8 +105,6 @@ function loadDataMatrixTask() {
 }
 
 function toggleDmButton(button) {
-    console.log(button);
-    console.log(button.style.background);
     if (button.style.background == "" || button.style.background == "white") {
         button.style.background = "black";
         button.style.color = "white";   
