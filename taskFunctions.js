@@ -69,24 +69,39 @@ function loadTasks() {
     }
     document.getElementById('ecb-task-button').addEventListener('click', ecbTask);
 
-    loadDataMatrixTask();
+    drawDataMatrixTask();
 }
 
 
 // Data matrix task
 var isGridHiden = false;
 var dataMatrixSize = 14;
+var datatMatrixButtonSize = 40;
 
-function loadDataMatrixTask() {
+function drawDataMatrixTask() {
     var taskHtml = "";
     for (var i = 0; i < dataMatrixSize; ++i) {
         taskHtml += '<div class="btn-group" role="group">';
         for (var j = 0; j < dataMatrixSize; ++j) {
-            taskHtml += '<button type="button" class="dm-button" onclick="toggleDmButton(this)">' + (i * dataMatrixSize + j) + '</button>';
+            taskHtml += '<button type="button" class="dm-button" style="width: ' + datatMatrixButtonSize + 'px; height: ' + datatMatrixButtonSize + 'px;"; onclick="toggleDmButton(this)">' + (i * dataMatrixSize + j) + '</button>';
         }
         taskHtml += '</div>';
     }
     document.getElementById('dm-task').innerHTML = taskHtml;
+
+    document.getElementById('dm-textarea').style.minHeight = dataMatrixSize * datatMatrixButtonSize + "px";
+}
+
+function loadDataMatrixTask() {
+    var variant = document.getElementById("dm-select").value;
+    var taskData = "";
+    if (variant == 1) {
+        taskData = '00000000000000 01010101010100 01011001001110 01100100111000 01110000010010 01101001111000 01011001001110 01110110100000 01110000111010 01110011000100 01010001001010 01100011000100 01111111111110 00000000000000';
+    } else if (variant == 2) {
+        taskData = 'Заглушка';
+    }
+
+    document.getElementById('dm-textarea').value = taskData;
 }
 
 function toggleDmButton(button) {
