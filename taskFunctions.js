@@ -20,8 +20,8 @@ function loadTasks() {
     function verifyHexInput(event) {
         var elem = event.target;
 
-        if (elem.value.match(/[^0-9a-fA-F\-\+\(\)]/g)) {
-            elem.value = elem.value.replace(/[^0-9a-fA-F\-\+\(\)]/g, '');
+        if (elem.value.match(/[^0-9a-fA-F]/g)) {
+            elem.value = elem.value.replace(/[^0-9a-fA-F]/g, '');
         }
 
         elem.value = elem.value.toLowerCase();
