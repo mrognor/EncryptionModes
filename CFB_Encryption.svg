@@ -24,15 +24,15 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="40.65864"
-     inkscape:cy="54.977553"
+     inkscape:zoom="2"
+     inkscape:cx="231"
+     inkscape:cy="136.25"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="stage"
+     inkscape:current-layer="g136"
      showgrid="true"
      showguides="false">
     <inkscape:grid
@@ -86,7 +86,7 @@
        id="text1">IV</text>
     <text
        x="63.365723"
-       y="36.915176"
+       y="252.91518"
        id="text2">Ключ</text>
     <text
        x="252.0918"
@@ -102,11 +102,11 @@
          y="179.34438" /></text>
     <path
        id="path6"
-       d="m 3.5,46.156387 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+       d="m 3.5,202.15639 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <path
        id="path5"
-       d="M 63.5,77.156387 V 145.15638"
-       style="stroke-width:2px" />
+       d="m 63.499999,147.15638 v 54.00001"
+       style="stroke-width:2.00002px" />
     <path
        id="path8"
        d="m 191.5,46.156387 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
@@ -207,7 +207,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:1.99999px" />
     <path
        id="path11-9"
-       d="m 251.30716,255.15639 v 38"
+       d="m 251.5,255.15639 v 38"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
@@ -229,16 +229,16 @@
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
        id="path3"
-       d="m 3.5,219.15639 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+       d="m 3.5,314.15639 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <text
        x="63.166992"
-       y="210.18373"
+       y="305.18372"
        id="text1-3"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">Открытый текст</text>
     <path
        id="path5-1-8"
-       d="m 210.50001,234.15635 h -86"
-       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+       d="m 158.50002,329.1564 h -34"
+       style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
@@ -257,6 +257,26 @@
        transform="matrix(0,0.9062407,-0.96828119,0,303.34369,185.21939)"
        inkscape:transform-center-x="-1.1498321"
        inkscape:transform-center-y="-3.3529102e-06" />
+    <path
+       id="path47"
+       d="m 159.49995,233.15639 v 96.99998"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path48"
+       d="M 210.49998,234.15638 H 160.49995"
+       style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
+    <path
+       id="path69"
+       d="m 384.5,234.15639 h -112"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path70"
+       d="M 385.50007,77.156396 V 235.15639"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path71"
+       d="m 672.50003,76.156392 h -288"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
   </g>
   <metadata
      id="metadata6">
@@ -267,4 +287,574 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <g
+     id="g94"
+     transform="translate(-345.00044,-5.1563873)">
+    <text
+       x="63.365723"
+       y="252.91518"
+       id="text72">Ключ</text>
+    <text
+       x="252.0918"
+       y="151.84438"
+       id="text73"><tspan
+         sodipodi:role="line"
+         id="tspan72"
+         x="252.0918"
+         y="151.84438">Шифрование</tspan><tspan
+         sodipodi:role="line"
+         id="tspan73"
+         x="252.0918"
+         y="179.34438" /></text>
+    <path
+       id="path73"
+       d="m 3.5,202.15639 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <path
+       id="path74"
+       d="m 63.499999,147.15638 v 54.00001"
+       style="stroke-width:2.00002px" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2;stroke-dasharray:none"
+       id="rect75"
+       width="198"
+       height="58.000004"
+       x="151.5"
+       y="116.15639" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path76"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(0,0.9062407,-0.96828119,0,223.34369,97.219392)"
+       inkscape:transform-center-x="-1.1498321"
+       inkscape:transform-center-y="-3.3529102e-06" />
+    <path
+       id="path77"
+       d="M 130.49999,146.15639 H 62.5"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path78"
+       d="m 251.5,77.156386 v 18"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path79"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,188.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path80"
+       d="m 251.5,175.15639 v 18"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path81"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,286.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path82"
+       d="m 191.5,314.15639 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <text
+       x="251.16699"
+       y="365.17297"
+       id="text82">Закрытый текст</text>
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2.00001;stroke-dasharray:none"
+       id="ellipse82"
+       cx="251.5"
+       cy="234.15639"
+       rx="19.999994"
+       ry="20" />
+    <path
+       id="path83"
+       d="m 251.5,215.15639 v 37.99999"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path84"
+       d="m 272.5,234.15637 h -42"
+       style="fill:none;stroke:#ffffff;stroke-width:1.99999px" />
+    <path
+       id="path85"
+       d="m 251.5,255.15639 v 38"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path86"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.24416,386.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path87"
+       d="m 3.5,314.15639 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <text
+       x="63.166992"
+       y="305.18372"
+       id="text87"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">Открытый текст</text>
+    <path
+       id="path88"
+       d="m 158.50002,329.1564 h -34"
+       style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path89"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(0,0.9062407,-0.96828119,0,303.34369,185.21939)"
+       inkscape:transform-center-x="-1.1498321"
+       inkscape:transform-center-y="-3.3529102e-06" />
+    <path
+       id="path90"
+       d="m 159.49995,233.15639 v 96.99998"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path91"
+       d="M 210.49998,234.15638 H 160.49995"
+       style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
+    <path
+       id="path92"
+       d="m 384.5,234.15639 h -112"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path93"
+       d="M 385.50007,77.156396 V 235.15639"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path94"
+       d="m 672.50003,76.156392 h -288"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+  </g>
+  <g
+     id="g115"
+     transform="translate(75.647563,-5.1563873)">
+    <text
+       x="63.365723"
+       y="252.91518"
+       id="text94">Ключ</text>
+    <text
+       x="252.0918"
+       y="151.84438"
+       id="text95"><tspan
+         sodipodi:role="line"
+         id="tspan94"
+         x="252.0918"
+         y="151.84438">Шифрование</tspan><tspan
+         sodipodi:role="line"
+         id="tspan95"
+         x="252.0918"
+         y="179.34438" /></text>
+    <path
+       id="path95"
+       d="m 3.5,202.15639 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <path
+       id="path96"
+       d="m 63.499999,147.15638 v 54.00001"
+       style="stroke-width:2.00002px" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2;stroke-dasharray:none"
+       id="rect96"
+       width="198"
+       height="58.000004"
+       x="151.5"
+       y="116.15639" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path97"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(0,0.9062407,-0.96828119,0,223.34369,97.219392)"
+       inkscape:transform-center-x="-1.1498321"
+       inkscape:transform-center-y="-3.3529102e-06" />
+    <path
+       id="path98"
+       d="M 130.49999,146.15639 H 62.5"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path99"
+       d="m 251.5,77.156386 v 18"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path100"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,188.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path101"
+       d="m 251.5,175.15639 v 18"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path102"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,286.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path103"
+       d="m 191.5,314.15639 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <text
+       x="251.16699"
+       y="365.17297"
+       id="text103">Закрытый текст</text>
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2.00001;stroke-dasharray:none"
+       id="ellipse103"
+       cx="251.5"
+       cy="234.15639"
+       rx="19.999994"
+       ry="20" />
+    <path
+       id="path104"
+       d="m 251.5,215.15639 v 37.99999"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path105"
+       d="m 272.5,234.15637 h -42"
+       style="fill:none;stroke:#ffffff;stroke-width:1.99999px" />
+    <path
+       id="path106"
+       d="m 251.5,255.15639 v 38"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path107"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.24416,386.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path108"
+       d="m 3.5,314.15639 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <text
+       x="63.166992"
+       y="305.18372"
+       id="text108"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">Открытый текст</text>
+    <path
+       id="path109"
+       d="m 158.50002,329.1564 h -34"
+       style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path110"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(0,0.9062407,-0.96828119,0,303.34369,185.21939)"
+       inkscape:transform-center-x="-1.1498321"
+       inkscape:transform-center-y="-3.3529102e-06" />
+    <path
+       id="path111"
+       d="m 159.49995,233.15639 v 96.99998"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path112"
+       d="M 210.49998,234.15638 H 160.49995"
+       style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
+    <path
+       id="path113"
+       d="m 384.5,234.15639 h -112"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path114"
+       d="M 385.50007,77.156396 V 235.15639"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path115"
+       d="m 672.50003,76.156392 h -288"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+  </g>
+  <g
+     id="g136"
+     transform="translate(496.29556,-5.1563873)">
+    <text
+       x="63.365723"
+       y="252.91518"
+       id="text115">Ключ</text>
+    <text
+       x="252.0918"
+       y="151.84438"
+       id="text116"><tspan
+         sodipodi:role="line"
+         id="tspan115"
+         x="252.0918"
+         y="151.84438">Шифрование</tspan><tspan
+         sodipodi:role="line"
+         id="tspan116"
+         x="252.0918"
+         y="179.34438" /></text>
+    <path
+       id="path116"
+       d="m 3.5,202.15639 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <path
+       id="path117"
+       d="m 63.499999,147.15638 v 54.00001"
+       style="stroke-width:2.00002px" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2;stroke-dasharray:none"
+       id="rect117"
+       width="198"
+       height="58.000004"
+       x="151.5"
+       y="116.15639" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path118"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(0,0.9062407,-0.96828119,0,223.34369,97.219392)"
+       inkscape:transform-center-x="-1.1498321"
+       inkscape:transform-center-y="-3.3529102e-06" />
+    <path
+       id="path119"
+       d="M 130.49999,146.15639 H 62.5"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path120"
+       d="m 251.5,77.156386 v 18"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path121"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,188.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path122"
+       d="m 251.5,175.15639 v 18"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path123"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,286.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path124"
+       d="m 191.5,314.15639 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <text
+       x="251.16699"
+       y="365.17297"
+       id="text124">Закрытый текст</text>
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2.00001;stroke-dasharray:none"
+       id="ellipse124"
+       cx="251.5"
+       cy="234.15639"
+       rx="19.999994"
+       ry="20" />
+    <path
+       id="path125"
+       d="m 251.5,215.15639 v 37.99999"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path126"
+       d="m 272.5,234.15637 h -42"
+       style="fill:none;stroke:#ffffff;stroke-width:1.99999px" />
+    <path
+       id="path127"
+       d="m 251.5,255.15639 v 38"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path128"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.24416,386.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path129"
+       d="m 3.5,314.15639 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <text
+       x="63.166992"
+       y="305.18372"
+       id="text129"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">Открытый текст</text>
+    <path
+       id="path130"
+       d="m 158.50002,329.1564 h -34"
+       style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path131"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(0,0.9062407,-0.96828119,0,303.34369,185.21939)"
+       inkscape:transform-center-x="-1.1498321"
+       inkscape:transform-center-y="-3.3529102e-06" />
+    <path
+       id="path132"
+       d="m 159.49995,233.15639 v 96.99998"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path133"
+       d="M 210.49998,234.15638 H 160.49995"
+       style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
+  </g>
 </svg>

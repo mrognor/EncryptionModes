@@ -24,15 +24,15 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="5.6568543"
-     inkscape:cx="88.388347"
-     inkscape:cy="75.39526"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="375.4737"
+     inkscape:cy="100.76272"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="stage"
+     inkscape:current-layer="svg7"
      showgrid="true"
      showguides="false">
     <inkscape:grid
@@ -200,4 +200,346 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <g
+     id="g21"
+     transform="translate(-345,-5.1563873)">
+    <text
+       x="251.16699"
+       y="37.183731"
+       id="text3">Открытый текст</text>
+    <text
+       x="63.365723"
+       y="36.915176"
+       id="text4">Ключ</text>
+    <text
+       x="252.0918"
+       y="151.84438"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         x="252.0918"
+         y="151.84438">Шифрование</tspan><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         x="252.0918"
+         y="179.34438" /></text>
+    <path
+       id="path7"
+       d="m 3.5,46.156387 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <path
+       id="path9"
+       d="M 63.5,77.156387 V 145.15638"
+       style="stroke-width:2px" />
+    <path
+       id="path14"
+       d="m 191.5,46.156387 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2;stroke-dasharray:none"
+       id="rect14"
+       width="198"
+       height="58.000004"
+       x="151.5"
+       y="116.15639" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path15"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(0,0.9062407,-0.96828119,0,223.34369,97.219392)"
+       inkscape:transform-center-x="-1.1498321"
+       inkscape:transform-center-y="-3.3529102e-06" />
+    <path
+       id="path16"
+       d="M 130.49999,146.15639 H 62.5"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path17"
+       d="m 251.5,77.156386 v 18"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path18"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,188.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path19"
+       d="m 251.5,175.15639 v 18"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path20"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,286.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path21"
+       d="m 191.5,214.15639 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <text
+       x="251.16699"
+       y="265.17297"
+       id="text21">Закрытый текст</text>
+  </g>
+  <g
+     id="g33"
+     transform="translate(75,-5.1563873)">
+    <text
+       x="251.16699"
+       y="37.183731"
+       id="text22">Открытый текст</text>
+    <text
+       x="63.365723"
+       y="36.915176"
+       id="text23">Ключ</text>
+    <text
+       x="252.0918"
+       y="151.84438"
+       id="text24"><tspan
+         sodipodi:role="line"
+         id="tspan23"
+         x="252.0918"
+         y="151.84438">Шифрование</tspan><tspan
+         sodipodi:role="line"
+         id="tspan24"
+         x="252.0918"
+         y="179.34438" /></text>
+    <path
+       id="path24"
+       d="m 3.5,46.156387 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <path
+       id="path25"
+       d="M 63.5,77.156387 V 145.15638"
+       style="stroke-width:2px" />
+    <path
+       id="path26"
+       d="m 191.5,46.156387 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2;stroke-dasharray:none"
+       id="rect26"
+       width="198"
+       height="58.000004"
+       x="151.5"
+       y="116.15639" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path27"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(0,0.9062407,-0.96828119,0,223.34369,97.219392)"
+       inkscape:transform-center-x="-1.1498321"
+       inkscape:transform-center-y="-3.3529102e-06" />
+    <path
+       id="path28"
+       d="M 130.49999,146.15639 H 62.5"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path29"
+       d="m 251.5,77.156386 v 18"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path30"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,188.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path31"
+       d="m 251.5,175.15639 v 18"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path32"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,286.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path33"
+       d="m 191.5,214.15639 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <text
+       x="251.16699"
+       y="265.17297"
+       id="text33">Закрытый текст</text>
+  </g>
+  <g
+     id="g45"
+     transform="translate(495,-5.1563873)">
+    <text
+       x="251.16699"
+       y="37.183731"
+       id="text34">Открытый текст</text>
+    <text
+       x="63.365723"
+       y="36.915176"
+       id="text35">Ключ</text>
+    <text
+       x="252.0918"
+       y="151.84438"
+       id="text36"><tspan
+         sodipodi:role="line"
+         id="tspan35"
+         x="252.0918"
+         y="151.84438">Шифрование</tspan><tspan
+         sodipodi:role="line"
+         id="tspan36"
+         x="252.0918"
+         y="179.34438" /></text>
+    <path
+       id="path36"
+       d="m 3.5,46.156387 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <path
+       id="path37"
+       d="M 63.5,77.156387 V 145.15638"
+       style="stroke-width:2px" />
+    <path
+       id="path38"
+       d="m 191.5,46.156387 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2;stroke-dasharray:none"
+       id="rect38"
+       width="198"
+       height="58.000004"
+       x="151.5"
+       y="116.15639" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path39"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(0,0.9062407,-0.96828119,0,223.34369,97.219392)"
+       inkscape:transform-center-x="-1.1498321"
+       inkscape:transform-center-y="-3.3529102e-06" />
+    <path
+       id="path40"
+       d="M 130.49999,146.15639 H 62.5"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       id="path41"
+       d="m 251.5,77.156386 v 18"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path42"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,188.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path43"
+       d="m 251.5,175.15639 v 18"
+       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
+       id="path44"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="54"
+       sodipodi:cy="89"
+       sodipodi:r1="9.5"
+       sodipodi:r2="4.75"
+       sodipodi:arg1="-1.5707963"
+       sodipodi:arg2="-0.52359878"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,286.00008)"
+       inkscape:transform-center-y="1.1498327"
+       inkscape:transform-center-x="-2.3529102e-06" />
+    <path
+       id="path45"
+       d="m 191.5,214.15639 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
+    <text
+       x="251.16699"
+       y="265.17297"
+       id="text45">Закрытый текст</text>
+  </g>
 </svg>
