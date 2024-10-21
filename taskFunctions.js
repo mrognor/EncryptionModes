@@ -7,7 +7,7 @@
     Не знаю как у вас дела, но надеюсь все хорошо. Удачи вам!
 */
 
-function loadTasks() {
+function loadTask() {
     // Byte input
     function focusHexInput(event) {
         var elem = event.target;
@@ -57,6 +57,10 @@ function loadTasks() {
     drawDataMatrixTask();
 }
 
+function resizeTask() {
+    resizeDataMatrix();
+}
+
 // Encryption tasks
 function ecbTask() {
     var elem1 = document.getElementById('ecb-task-data-0');
@@ -76,9 +80,9 @@ function ecbTask() {
 // Data matrix task
 var isGridHiden = false;
 var dataMatrixSize = 14;
-var datatMatrixButtonSize = 40;
 
 function drawDataMatrixTask() {
+    var datatMatrixButtonSize = document.getElementById('dm-textarea').clientWidth / dataMatrixSize;
     var taskHtml = "";
     for (var i = 0; i < dataMatrixSize; ++i) {
         taskHtml += '<div class="btn-group" role="group">';
@@ -90,6 +94,16 @@ function drawDataMatrixTask() {
     document.getElementById('dm-task').innerHTML = taskHtml;
 
     document.getElementById('dm-textarea').style.minHeight = dataMatrixSize * datatMatrixButtonSize + "px";
+}
+
+function resizeDataMatrix() {
+    var datatMatrixButtonSize = document.getElementById('dm-textarea').clientWidth / dataMatrixSize;
+    document.getElementById('dm-textarea').style.minHeight = dataMatrixSize * datatMatrixButtonSize + "px";
+
+    Array.prototype.forEach.call(document.getElementsByClassName('dm-button'), el => {
+        el.style.width = datatMatrixButtonSize + "px";
+        el.style.height = datatMatrixButtonSize + "px";
+    });
 }
 
 function loadDataMatrixTask() {
