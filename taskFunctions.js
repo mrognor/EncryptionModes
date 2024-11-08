@@ -7,6 +7,27 @@
     Не знаю как у вас дела, но надеюсь все хорошо. Удачи вам!
 */
 
+function verifyHexInput(event) {
+    var elem = event.target;
+
+    if (elem.value.match(/[^0-9a-fA-F]/g)) {
+        elem.value = elem.value.replace(/[^0-9a-fA-F]/g, '');
+    }
+
+    elem.value = elem.value.toLowerCase();
+
+    if (elem.value.length >= 2) {
+        var num = elem.id.substring(elem.id.lastIndexOf("-") + 1);
+        num++;
+        var nextElem = document.getElementById(elem.id.substring(0, elem.id.lastIndexOf("-") + 1) + num);
+        if (nextElem != null) {
+            if (nextElem.value.length == 0) {
+                nextElem.focus();
+            }
+        }
+    }
+}
+
 function loadTask() {
     // Byte input
     function focusHexInput(event) {
@@ -14,27 +35,6 @@ function loadTask() {
 
         if (elem.value.startsWith("0x")) {
             elem.value = elem.value.slice(2);
-        }
-    }
-
-    function verifyHexInput(event) {
-        var elem = event.target;
-
-        if (elem.value.match(/[^0-9a-fA-F]/g)) {
-            elem.value = elem.value.replace(/[^0-9a-fA-F]/g, '');
-        }
-
-        elem.value = elem.value.toLowerCase();
-
-        if (elem.value.length >= 2) {
-            var num = elem.id.substring(elem.id.lastIndexOf("-") + 1);
-            num++;
-            var nextElem = document.getElementById(elem.id.substring(0, elem.id.lastIndexOf("-") + 1) + num);
-            if (nextElem != null) {
-                if (nextElem.value.length == 0) {
-                    nextElem.focus();
-                }
-            }
         }
     }
 
@@ -155,4 +155,57 @@ function clearDm() {
         el.style.background = 'white';
         el.style.color = "black";
     });
+}
+
+// Flag task
+var realWidth = 0, realHeight = 0;
+
+function loadFlagTask() {
+    var variant = document.getElementById("flag-select").value;
+    var taskFilePath = "";
+    if (variant == 1) {
+        taskFilePath = "resources/Flag1.png";
+    } else if (variant == 2) {
+        taskFilePath = "resources/Flag2.png";
+    } else if (variant == 3) {
+        taskFilePath = "resources/Flag3.png";
+    }
+
+    if (taskFilePath != "") {
+        var img = new Image();
+        img.src = taskFilePath;
+        img.onload = function() {
+            realWidth = img.width;
+            realHeight = img.height;
+            document.getElementById('flag-to-decrypt').src = img.src;
+        }
+    }
+}
+
+function flagDecrypt() {
+    const img = document.getElementById('flag-to-decrypt');
+    const canvas = document.createElement("canvas");
+    canvas.width = realWidth;
+    canvas.height = realHeight;
+
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+
+    var imgd = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    var pix = imgd.data;
+
+    // Add padding
+    var hex = document.getElementById("flag-key").value + "00000000";
+
+    var keyA = parseInt(hex.substring(0, 2), 16), keyB = parseInt(hex.substring(2, 4), 16), keyC = parseInt(hex.substring(4, 6), 16), keyD = parseInt(hex.substring(6, 8), 16);
+    for (var i = 0, n = pix.length; i < n; i += 4) {
+        pix[i] = pix[i] ^ keyA;
+        pix[i + 1] = pix[i + 1] ^ keyB;
+        pix[i + 2] = pix[i + 2] ^ keyC;
+        pix[i + 3] = 255 ^ keyD;
+    }
+
+    ctx.putImageData(imgd, 0, 0);
+
+    document.getElementById('flag-decrypted').src = canvas.toDataURL();
 }
