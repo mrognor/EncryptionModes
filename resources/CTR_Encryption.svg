@@ -24,9 +24,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="485.78236"
-     inkscape:cy="103.41437"
+     inkscape:zoom="2"
+     inkscape:cx="343"
+     inkscape:cy="152.75"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -79,7 +79,8 @@
   </defs>
   <g
      id="stage"
-     transform="translate(-765,-5.1563873)">
+     transform="translate(-765,-5.1563873)"
+     inkscape:label="stage-1">
     <text
        x="250.56006"
        y="36.904434"
@@ -257,6 +258,103 @@
        transform="matrix(0,0.9062407,-0.96828119,0,303.34369,185.21939)"
        inkscape:transform-center-x="-1.1498321"
        inkscape:transform-center-y="-3.3529102e-06" />
+    <text
+       x="-747.05957"
+       y="61.704102"
+       id="text3-5"
+       inkscape:label="k1"
+       style="fill:#ffffff;stroke:none;stroke-width:2px;font-size:22px;font-family:Helvetica;text-anchor:middle"
+       transform="translate(765,5.1563873)">aa</text>
+    <text
+       x="47.94043"
+       y="66.860489"
+       id="text7"
+       inkscape:label="k2"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="77.94043"
+       y="66.860489"
+       id="text8"
+       inkscape:label="k3"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="107.94043"
+       y="66.860489"
+       id="text9"
+       inkscape:label="k4"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="205.94043"
+       y="66.860489"
+       id="text10"
+       inkscape:label="c1"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="235.94043"
+       y="66.860489"
+       id="text11"
+       inkscape:label="c2"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="265.94043"
+       y="66.860489"
+       id="text12"
+       inkscape:label="c3"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="295.94043"
+       y="66.860489"
+       id="text14"
+       inkscape:label="c4"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="17.94043"
+       y="239.86049"
+       id="text15"
+       inkscape:label="o1"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="47.94043"
+       y="239.86049"
+       id="text16"
+       inkscape:label="o2"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="77.94043"
+       y="239.86049"
+       id="text17"
+       inkscape:label="o3"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="107.94043"
+       y="239.86049"
+       id="text18"
+       inkscape:label="o4"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="205.94043"
+       y="334.8605"
+       id="text19"
+       inkscape:label="e1"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="235.94043"
+       y="334.8605"
+       id="text20"
+       inkscape:label="e2"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="265.94043"
+       y="334.8605"
+       id="text21"
+       inkscape:label="e3"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="295.94043"
+       y="334.8605"
+       id="text23"
+       inkscape:label="e4"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
   </g>
   <metadata
      id="metadata6">
@@ -268,41 +366,42 @@
     </rdf:RDF>
   </metadata>
   <g
-     id="g29"
-     transform="translate(-345.00044,-5.1563873)">
+     id="g95"
+     transform="translate(-345.00044,-5.1563873)"
+     inkscape:label="stage-2">
     <text
        x="250.56006"
        y="36.904434"
-       id="text3">Счетчик</text>
+       id="text24">Счетчик</text>
     <text
        x="63.365723"
        y="36.915176"
-       id="text4">Ключ</text>
+       id="text25">Ключ</text>
     <text
        x="252.0918"
        y="151.84438"
-       id="text6"><tspan
+       id="text26"><tspan
          sodipodi:role="line"
-         id="tspan4"
+         id="tspan25"
          x="252.0918"
          y="151.84438">Шифрование</tspan><tspan
          sodipodi:role="line"
-         id="tspan5"
+         id="tspan26"
          x="252.0918"
          y="179.34438" /></text>
     <path
-       id="path7"
+       id="path30"
        d="m 3.5,46.156387 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <path
-       id="path9"
+       id="path48"
        d="M 63.5,77.156387 V 145.15638"
        style="stroke-width:2px" />
     <path
-       id="path14"
+       id="path66"
        d="m 191.5,46.156387 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <rect
        style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2;stroke-dasharray:none"
-       id="rect14"
+       id="rect66"
        width="198"
        height="58.000004"
        x="151.5"
@@ -310,7 +409,7 @@
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path15"
+       id="path67"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -326,17 +425,17 @@
        inkscape:transform-center-x="-1.1498321"
        inkscape:transform-center-y="-3.3529102e-06" />
     <path
-       id="path17"
+       id="path68"
        d="M 130.49999,146.15639 H 62.5"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
-       id="path18"
+       id="path69"
        d="m 251.5,77.156386 v 18"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path19"
+       id="path70"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -352,13 +451,13 @@
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
-       id="path20"
+       id="path71"
        d="m 251.5,175.15639 v 18"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path21"
+       id="path72"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -374,35 +473,35 @@
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
-       id="path22"
+       id="path73"
        d="m 191.5,314.15639 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <text
        x="251.16699"
        y="365.17297"
-       id="text22">Закрытый текст</text>
+       id="text73">Закрытый текст</text>
     <ellipse
        style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2.00001;stroke-dasharray:none"
-       id="ellipse22"
+       id="ellipse73"
        cx="251.5"
        cy="234.15639"
        rx="19.999994"
        ry="20" />
     <path
-       id="path23"
+       id="path74"
        d="m 251.5,215.15639 v 37.99999"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
-       id="path24"
+       id="path75"
        d="m 272.5,234.15637 h -42"
        style="fill:none;stroke:#ffffff;stroke-width:1.99999px" />
     <path
-       id="path25"
+       id="path76"
        d="m 251.30716,255.15639 v 38"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path26"
+       id="path77"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -418,21 +517,21 @@
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
-       id="path27"
+       id="path78"
        d="m 3.5,219.15639 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <text
        x="63.166992"
        y="210.18373"
-       id="text27"
+       id="text78"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">Открытый текст</text>
     <path
-       id="path28"
+       id="path79"
        d="m 210.50001,234.15635 h -86"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path29"
+       id="path80"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -447,43 +546,141 @@
        transform="matrix(0,0.9062407,-0.96828119,0,303.34369,185.21939)"
        inkscape:transform-center-x="-1.1498321"
        inkscape:transform-center-y="-3.3529102e-06" />
+    <text
+       x="-747.05957"
+       y="61.704102"
+       id="text80"
+       inkscape:label="k5"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px"
+       transform="translate(765,5.1563873)">aa</text>
+    <text
+       x="47.94043"
+       y="66.860489"
+       id="text81"
+       inkscape:label="k6"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="77.94043"
+       y="66.860489"
+       id="text82"
+       inkscape:label="k7"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="107.94043"
+       y="66.860489"
+       id="text83"
+       inkscape:label="k8"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="205.94043"
+       y="66.860489"
+       id="text84"
+       inkscape:label="c5"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="235.94043"
+       y="66.860489"
+       id="text85"
+       inkscape:label="c6"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="265.94043"
+       y="66.860489"
+       id="text86"
+       inkscape:label="c7"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="295.94043"
+       y="66.860489"
+       id="text87"
+       inkscape:label="c8"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="17.94043"
+       y="239.86049"
+       id="text88"
+       inkscape:label="o5"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="47.94043"
+       y="239.86049"
+       id="text89"
+       inkscape:label="o6"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="77.94043"
+       y="239.86049"
+       id="text90"
+       inkscape:label="o7"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="107.94043"
+       y="239.86049"
+       id="text91"
+       inkscape:label="o8"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="205.94043"
+       y="334.8605"
+       id="text92"
+       inkscape:label="e5"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="235.94043"
+       y="334.8605"
+       id="text93"
+       inkscape:label="e6"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="265.94043"
+       y="334.8605"
+       id="text94"
+       inkscape:label="e7"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="295.94043"
+       y="334.8605"
+       id="text95"
+       inkscape:label="e8"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
   </g>
   <g
-     id="g47"
-     transform="translate(75.647563,-5.1563873)">
+     id="g129"
+     transform="translate(75.647563,-5.1563873)"
+     inkscape:label="stage-3">
     <text
        x="250.56006"
        y="36.904434"
-       id="text29">Счетчик</text>
+       id="text96">Счетчик</text>
     <text
        x="63.365723"
        y="36.915176"
-       id="text30">Ключ</text>
+       id="text97">Ключ</text>
     <text
        x="252.0918"
        y="151.84438"
-       id="text31"><tspan
+       id="text98"><tspan
          sodipodi:role="line"
-         id="tspan30"
+         id="tspan97"
          x="252.0918"
          y="151.84438">Шифрование</tspan><tspan
          sodipodi:role="line"
-         id="tspan31"
+         id="tspan98"
          x="252.0918"
          y="179.34438" /></text>
     <path
-       id="path31"
+       id="path98"
        d="m 3.5,46.156387 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <path
-       id="path32"
+       id="path99"
        d="M 63.5,77.156387 V 145.15638"
        style="stroke-width:2px" />
     <path
-       id="path33"
+       id="path100"
        d="m 191.5,46.156387 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <rect
        style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2;stroke-dasharray:none"
-       id="rect33"
+       id="rect100"
        width="198"
        height="58.000004"
        x="151.5"
@@ -491,7 +688,7 @@
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path34"
+       id="path101"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -507,17 +704,17 @@
        inkscape:transform-center-x="-1.1498321"
        inkscape:transform-center-y="-3.3529102e-06" />
     <path
-       id="path35"
+       id="path102"
        d="M 130.49999,146.15639 H 62.5"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
-       id="path36"
+       id="path103"
        d="m 251.5,77.156386 v 18"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path37"
+       id="path104"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -533,13 +730,13 @@
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
-       id="path38"
+       id="path105"
        d="m 251.5,175.15639 v 18"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path39"
+       id="path106"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -555,35 +752,35 @@
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
-       id="path40"
+       id="path107"
        d="m 191.5,314.15639 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <text
        x="251.16699"
        y="365.17297"
-       id="text40">Закрытый текст</text>
+       id="text107">Закрытый текст</text>
     <ellipse
        style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2.00001;stroke-dasharray:none"
-       id="ellipse40"
+       id="ellipse107"
        cx="251.5"
        cy="234.15639"
        rx="19.999994"
        ry="20" />
     <path
-       id="path41"
+       id="path108"
        d="m 251.5,215.15639 v 37.99999"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
-       id="path42"
+       id="path109"
        d="m 272.5,234.15637 h -42"
        style="fill:none;stroke:#ffffff;stroke-width:1.99999px" />
     <path
-       id="path43"
+       id="path110"
        d="m 251.30716,255.15639 v 38"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path44"
+       id="path111"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -599,21 +796,21 @@
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
-       id="path45"
+       id="path112"
        d="m 3.5,219.15639 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <text
        x="63.166992"
        y="210.18373"
-       id="text45"
+       id="text112"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">Открытый текст</text>
     <path
-       id="path46"
+       id="path113"
        d="m 210.50001,234.15635 h -86"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path47"
+       id="path114"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -628,43 +825,141 @@
        transform="matrix(0,0.9062407,-0.96828119,0,303.34369,185.21939)"
        inkscape:transform-center-x="-1.1498321"
        inkscape:transform-center-y="-3.3529102e-06" />
+    <text
+       x="-747.05957"
+       y="61.704102"
+       id="text114"
+       inkscape:label="k9"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px"
+       transform="translate(765,5.1563873)">aa</text>
+    <text
+       x="47.94043"
+       y="66.860489"
+       id="text115"
+       inkscape:label="k10"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="77.94043"
+       y="66.860489"
+       id="text116"
+       inkscape:label="k11"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="107.94043"
+       y="66.860489"
+       id="text117"
+       inkscape:label="k12"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="205.94043"
+       y="66.860489"
+       id="text118"
+       inkscape:label="c9"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="235.94043"
+       y="66.860489"
+       id="text119"
+       inkscape:label="c10"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="265.94043"
+       y="66.860489"
+       id="text120"
+       inkscape:label="c11"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="295.94043"
+       y="66.860489"
+       id="text121"
+       inkscape:label="c12"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="17.94043"
+       y="239.86049"
+       id="text122"
+       inkscape:label="o9"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="47.94043"
+       y="239.86049"
+       id="text123"
+       inkscape:label="o10"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="77.94043"
+       y="239.86049"
+       id="text124"
+       inkscape:label="o11"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="107.94043"
+       y="239.86049"
+       id="text125"
+       inkscape:label="o12"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="205.94043"
+       y="334.8605"
+       id="text126"
+       inkscape:label="e9"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="235.94043"
+       y="334.8605"
+       id="text127"
+       inkscape:label="e10"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="265.94043"
+       y="334.8605"
+       id="text128"
+       inkscape:label="e11"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="295.94043"
+       y="334.8605"
+       id="text129"
+       inkscape:label="e12"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
   </g>
   <g
-     id="g65"
-     transform="translate(496.29556,-5.1563873)">
+     id="g163"
+     transform="translate(496.29556,-5.1563873)"
+     inkscape:label="stage-4">
     <text
        x="250.56006"
        y="36.904434"
-       id="text47">Счетчик</text>
+       id="text130">Счетчик</text>
     <text
        x="63.365723"
        y="36.915176"
-       id="text48">Ключ</text>
+       id="text131">Ключ</text>
     <text
        x="252.0918"
        y="151.84438"
-       id="text49"><tspan
+       id="text132"><tspan
          sodipodi:role="line"
-         id="tspan48"
+         id="tspan131"
          x="252.0918"
          y="151.84438">Шифрование</tspan><tspan
          sodipodi:role="line"
-         id="tspan49"
+         id="tspan132"
          x="252.0918"
          y="179.34438" /></text>
     <path
-       id="path49"
+       id="path132"
        d="m 3.5,46.156387 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <path
-       id="path50"
+       id="path133"
        d="M 63.5,77.156387 V 145.15638"
        style="stroke-width:2px" />
     <path
-       id="path51"
+       id="path134"
        d="m 191.5,46.156387 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <rect
        style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2;stroke-dasharray:none"
-       id="rect51"
+       id="rect134"
        width="198"
        height="58.000004"
        x="151.5"
@@ -672,7 +967,7 @@
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path52"
+       id="path135"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -688,17 +983,17 @@
        inkscape:transform-center-x="-1.1498321"
        inkscape:transform-center-y="-3.3529102e-06" />
     <path
-       id="path53"
+       id="path136"
        d="M 130.49999,146.15639 H 62.5"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
-       id="path54"
+       id="path137"
        d="m 251.5,77.156386 v 18"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path55"
+       id="path138"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -714,13 +1009,13 @@
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
-       id="path56"
+       id="path139"
        d="m 251.5,175.15639 v 18"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path57"
+       id="path140"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -736,35 +1031,35 @@
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
-       id="path58"
+       id="path141"
        d="m 191.5,314.15639 h 120 v 30 h -120 z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <text
        x="251.16699"
        y="365.17297"
-       id="text58">Закрытый текст</text>
+       id="text141">Закрытый текст</text>
     <ellipse
        style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2.00001;stroke-dasharray:none"
-       id="ellipse58"
+       id="ellipse141"
        cx="251.5"
        cy="234.15639"
        rx="19.999994"
        ry="20" />
     <path
-       id="path59"
+       id="path142"
        d="m 251.5,215.15639 v 37.99999"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
-       id="path60"
+       id="path143"
        d="m 272.5,234.15637 h -42"
        style="fill:none;stroke:#ffffff;stroke-width:1.99999px" />
     <path
-       id="path61"
+       id="path144"
        d="m 251.30716,255.15639 v 38"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path62"
+       id="path145"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -780,21 +1075,21 @@
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
-       id="path63"
+       id="path146"
        d="m 3.5,219.15639 h 120 v 30 H 3.5 Z m 30,0 v 30 m 30,0 v -30 m 30,0 v 30" />
     <text
        x="63.166992"
        y="210.18373"
-       id="text63"
+       id="text146"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">Открытый текст</text>
     <path
-       id="path64"
+       id="path147"
        d="m 210.50001,234.15635 h -86"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:0.980099;stroke:#ffffff;stroke-width:4.2701;stroke-dasharray:none"
-       id="path65"
+       id="path148"
        inkscape:flatsided="false"
        sodipodi:sides="3"
        sodipodi:cx="54"
@@ -809,5 +1104,102 @@
        transform="matrix(0,0.9062407,-0.96828119,0,303.34369,185.21939)"
        inkscape:transform-center-x="-1.1498321"
        inkscape:transform-center-y="-3.3529102e-06" />
+    <text
+       x="-747.05957"
+       y="61.704102"
+       id="text148"
+       inkscape:label="k13"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px"
+       transform="translate(765,5.1563873)">aa</text>
+    <text
+       x="47.94043"
+       y="66.860489"
+       id="text149"
+       inkscape:label="k14"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="77.94043"
+       y="66.860489"
+       id="text150"
+       inkscape:label="k15"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="107.94043"
+       y="66.860489"
+       id="text151"
+       inkscape:label="k16"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="205.94043"
+       y="66.860489"
+       id="text152"
+       inkscape:label="c13"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="235.94043"
+       y="66.860489"
+       id="text153"
+       inkscape:label="c14"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="265.94043"
+       y="66.860489"
+       id="text154"
+       inkscape:label="c15"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="295.94043"
+       y="66.860489"
+       id="text155"
+       inkscape:label="c16"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="17.94043"
+       y="239.86049"
+       id="text156"
+       inkscape:label="o13"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="47.94043"
+       y="239.86049"
+       id="text157"
+       inkscape:label="o14"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="77.94043"
+       y="239.86049"
+       id="text158"
+       inkscape:label="o15"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="107.94043"
+       y="239.86049"
+       id="text159"
+       inkscape:label="o16"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="205.94043"
+       y="334.8605"
+       id="text160"
+       inkscape:label="e13"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="235.94043"
+       y="334.8605"
+       id="text161"
+       inkscape:label="e14"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="265.94043"
+       y="334.8605"
+       id="text162"
+       inkscape:label="e15"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
+    <text
+       x="295.94043"
+       y="334.8605"
+       id="text163"
+       inkscape:label="e16"
+       style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
   </g>
 </svg>
