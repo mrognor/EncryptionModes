@@ -62,18 +62,33 @@ function resizeTask() {
 }
 
 // Encryption tasks
-function ecbTask() {
-    var elem1 = document.getElementById('ecb-task-data-0');
-    var elem2 = document.getElementById('ecb-task-data-1');
-    var elem3 = document.getElementById('ecb-task-data-2');
-    var elem4 = document.getElementById('ecb-task-data-3');
-
+function encryptionTask() {
+    var key = [];
+    for (var i = 0; i < 4; i += 1) {
+        key.push(document.getElementById('encryption-task-key-' + i).value);
+    }
 
     for (var i = 0; i < 16; i += 4) {
-        document.getElementById('key-' + i).innerHTML = elem1.value.slice(2);
-        document.getElementById('key-' + (i + 1)).innerHTML = elem2.value.slice(2);
-        document.getElementById('key-' + (i + 2)).innerHTML = elem3.value.slice(2);
-        document.getElementById('key-' + (i + 3)).innerHTML = elem4.value.slice(2);
+        document.getElementById('ecb-k' + i).innerHTML = key[0].slice(2);
+        document.getElementById('ecb-k' + (i + 1)).innerHTML = key[1].slice(2);
+        document.getElementById('ecb-k' + (i + 2)).innerHTML = key[2].slice(2);
+        document.getElementById('ecb-k' + (i + 3)).innerHTML = key[3].slice(2);
+    }
+
+    var data = [];
+    for (var i = 0; i < 16; i += 1) {
+        data.push(document.getElementById('encryption-task-data-' + (i)).value.slice(2));
+        document.getElementById('ecb-o' + i).innerHTML = data[i];
+    }
+
+    console.log(data);
+    console.log(key);
+
+    for (var i = 0; i < 16; i += 4) {
+        document.getElementById('ecb-e' + i).innerHTML = (parseInt(key[0], 16) ^ parseInt(data[i], 16)).toString(16);
+        document.getElementById('ecb-e' + (i + 1)).innerHTML = (parseInt(key[1], 16) ^ parseInt(data[i + 1], 16)).toString(16);
+        document.getElementById('ecb-e' + (i + 2)).innerHTML = (parseInt(key[2], 16) ^ parseInt(data[i + 2], 16)).toString(16);
+        document.getElementById('ecb-e' + (i + 3)).innerHTML = (parseInt(key[3], 16) ^ parseInt(data[i + 3], 16)).toString(16);
     }
 }
 
