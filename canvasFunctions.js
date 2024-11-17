@@ -70,6 +70,7 @@ function loadCanvas() {
     // Drawing variables
     var isDraw = false;
     var isMoved = false;
+    var ongoingTouches = [];
 
     // Load image from local storage
     var savedImage = localStorage.getItem("image");
@@ -90,7 +91,7 @@ function loadCanvas() {
         }
     }
 
-    // Drawing functions
+    // Desktop drawing functions
     function startDrawing() {
         previousCanvases.push(canvasContext.getImageData(0, 0, mainCanvas.width, mainCanvas.height));
 
@@ -129,11 +130,94 @@ function loadCanvas() {
         }
     }
 
+    // Mobile drawing functions
+    function handleTouchStart(event) {
+        previousCanvases.push(canvasContext.getImageData(0, 0, mainCanvas.width, mainCanvas.height));
+
+        event.preventDefault();
+
+        var touches = event.changedTouches;
+
+        for (var i = 0; i < touches.length; i++) {
+            ongoingTouches.push(copyTouch(touches[i]));
+            canvasContext.beginPath();
+            canvasContext.arc(touches[i].pageX - mainCanvas.offsetLeft, touches[i].pageY - mainCanvas.offsetTop, 4, 0, 2 * Math.PI, false); // a circle at the start
+            canvasContext.fill();
+        }
+    }
+
+    function handleTouchMove(event) {
+        event.preventDefault();
+
+        var touches = event.changedTouches;
+      
+        for (var i = 0; i < touches.length; i++) {
+            var idx = ongoingTouchIndexById(touches[i].identifier);
+        
+            if (idx >= 0) {
+                canvasContext.beginPath();
+                canvasContext.lineWidth = penWidth;
+                canvasContext.lineCap = "round";
+                canvasContext.moveTo(ongoingTouches[idx].pageX - mainCanvas.offsetLeft, ongoingTouches[idx].pageY - mainCanvas.offsetTop);
+                canvasContext.lineTo(touches[i].pageX - mainCanvas.offsetLeft, touches[i].pageY - mainCanvas.offsetTop);
+                canvasContext.stroke();
+                ongoingTouches.splice(idx, 1, copyTouch(touches[i])); // swap in the new touch record
+            }
+        }
+    }
+
+    function handleTouchEnd(event) {
+        event.preventDefault();
+
+        var touches = event.changedTouches;
+      
+        for (var i = 0; i < touches.length; i++) {
+            var idx = ongoingTouchIndexById(touches[i].identifier);
+      
+            if (idx >= 0) {
+                canvasContext.beginPath();
+                canvasContext.moveTo(ongoingTouches[idx].pageX - mainCanvas.offsetLeft, ongoingTouches[idx].pageY - mainCanvas.offsetTop);
+                canvasContext.lineTo(touches[i].pageX - mainCanvas.offsetLeft, touches[i].pageY - mainCanvas.offsetTop);
+                ongoingTouches.splice(idx, 1); // remove it; we're done
+            }
+        }
+    }
+
+    function handleTouchCancel(event) {
+        event.preventDefault();
+
+        var touches = event.changedTouches;
+      
+        for (var i = 0; i < touches.length; i++) {
+            var idx = ongoingTouchIndexById(touches[i].identifier);
+            ongoingTouches.splice(idx, 1); // remove it; we're done
+        }
+    }
+
+    function copyTouch({ identifier, pageX, pageY }) {
+        return { identifier, pageX, pageY };
+    }
+
+    function ongoingTouchIndexById(idToFind) {
+        for (var i = 0; i < ongoingTouches.length; i++) {
+            var id = ongoingTouches[i].identifier;
+      
+            if (id == idToFind) {
+                return i;
+            }
+        }
+        return -1; // not found
+    }
+
     // Add canvas listeners
     mainCanvas.onmousedown = startDrawing;  
     mainCanvas.onmouseup = stopDrawing;  
     mainCanvas.onmousemove = draw;
     mainCanvas.onmouseover = drawOver;
+    mainCanvas.ontouchstart = handleTouchStart;
+    mainCanvas.ontouchend = handleTouchEnd;
+    mainCanvas.ontouchcancel = handleTouchCancel;
+    mainCanvas.ontouchmove = handleTouchMove;
     isFirstCanvasLoad = false;
 }
 
