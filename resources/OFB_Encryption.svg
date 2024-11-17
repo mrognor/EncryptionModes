@@ -5,7 +5,7 @@
    viewBox="0 0 1565 315"
    width="100%"
    height="50%"
-   sodipodi:docname="CFB_Encryption.svg"
+   sodipodi:docname="OFB_Encryption.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    id="svg7"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -24,9 +24,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="2"
-     inkscape:cx="299"
-     inkscape:cy="126.75"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="376.18081"
+     inkscape:cy="183.49421"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -54,7 +54,7 @@
        snapvisiblegridlinesonly="true" />
   </sodipodi:namedview>
   <title
-     id="title1">Шифрование в режиме CFB</title>
+     id="title1">Шифрование в режиме OFB</title>
   <style
      type="text/css"
      id="style1">
@@ -164,7 +164,7 @@
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
        id="path11"
-       d="m 251.5,175.15639 v 18"
+       d="m 251.5,175.15639 v 38"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
@@ -181,7 +181,7 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
-       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,286.00008)"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,306.00008)"
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
@@ -195,20 +195,20 @@
        style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2.00001;stroke-dasharray:none"
        id="path2"
        cx="251.5"
-       cy="234.15639"
+       cy="254.15639"
        rx="19.999994"
        ry="20" />
     <path
        id="path4"
-       d="m 251.5,215.15639 v 37.99999"
+       d="m 251.5,235.15639 v 37.99999"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        id="path16"
-       d="m 272.5,234.15637 h -42"
+       d="m 272.5,254.15638 h -42"
        style="fill:none;stroke:#ffffff;stroke-width:1.99999px" />
     <path
        id="path11-9"
-       d="m 251.5,255.15639 v 38"
+       d="m 251.5,275.15639 v 18"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
@@ -255,24 +255,24 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
-       transform="matrix(0,0.9062407,-0.96828119,0,303.34369,185.21939)"
+       transform="matrix(0,0.9062407,-0.96828119,0,303.34369,205.21854)"
        inkscape:transform-center-x="-1.1498321"
        inkscape:transform-center-y="-3.3529102e-06" />
     <path
        id="path47"
-       d="m 159.49995,233.15639 v 96.99998"
+       d="m 159.49995,253.15639 v 77"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        id="path48"
-       d="M 210.49998,234.15638 H 160.49995"
+       d="M 210.49998,254.15639 H 160.49995"
        style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
     <path
        id="path69"
-       d="m 384.5,274.15639 h -133"
-       style="fill:none;stroke:#ffffff;stroke-width:2px" />
+       d="M 384.50002,194.15639 H 252.50001"
+       style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
     <path
        id="path70"
-       d="M 385.50005,77.156391 V 275.15638"
+       d="M 385.50005,77.156391 V 195.15639"
        style="fill:none;stroke:#ffffff;stroke-width:1.99999px" />
     <path
        id="path71"
@@ -281,82 +281,82 @@
     <text
        x="17.94043"
        y="222.86049"
-       id="cfb-k0"
+       id="ofb-k0"
        inkscape:label="k0">aa</text>
     <text
        x="47.94043"
        y="222.86049"
-       id="cfb-k1"
+       id="ofb-k1"
        inkscape:label="k1">aa</text>
     <text
        x="77.94043"
        y="222.86049"
-       id="cfb-k2"
+       id="ofb-k2"
        inkscape:label="k2">aa</text>
     <text
        x="107.94043"
        y="222.86049"
-       id="cfb-k3"
+       id="ofb-k3"
        inkscape:label="k3">aa</text>
     <text
        x="17.94043"
        y="334.8605"
-       id="cfb-o0"
+       id="ofb-o0"
        inkscape:label="o0">aa</text>
     <text
        x="47.94043"
        y="334.8605"
-       id="cfb-o1"
+       id="ofb-o1"
        inkscape:label="o1">aa</text>
     <text
        x="77.94043"
        y="334.8605"
-       id="cfb-o2"
+       id="ofb-o2"
        inkscape:label="o2">aa</text>
     <text
        x="107.94043"
        y="334.8605"
-       id="cfb-o3"
-       inkscape:label="cfb-o3">aa</text>
+       id="ofb-o3"
+       inkscape:label="ofb-o3">aa</text>
     <text
        x="205.94043"
        y="334.8605"
-       id="cfb-e0"
+       id="ofb-e0"
        inkscape:label="e0">aa</text>
     <text
        x="235.94043"
        y="334.8605"
-       id="cfb-e1"
+       id="ofb-e1"
        inkscape:label="e1">aa</text>
     <text
        x="265.94043"
        y="334.8605"
-       id="cfb-e2"
+       id="ofb-e2"
        inkscape:label="e2">aa</text>
     <text
        x="295.94043"
        y="334.8605"
-       id="cfb-e3"
+       id="ofb-e3"
        inkscape:label="e3">aa</text>
     <text
        x="205.94043"
        y="66.860489"
-       id="cfb-i0"
+       id="ofb-i0"
        inkscape:label="i0">aa</text>
     <text
        x="235.94043"
        y="66.860489"
-       id="cfb-i1"
+       id="ofb-i1"
        inkscape:label="i1">aa</text>
     <text
        x="265.94043"
        y="66.860489"
-       id="cfb-i2"
+       id="ofb-i2"
        inkscape:label="i2">aa</text>
     <text
        x="295.94043"
        y="66.860489"
-       id="cfb-i3"
+       id="ofb-i3"
        inkscape:label="i3">aa</text>
   </g>
   <metadata
@@ -448,7 +448,7 @@
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
        id="path30"
-       d="m 251.5,175.15639 v 18"
+       d="m 251.5,175.15639 v 38"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
@@ -465,7 +465,7 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
-       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,286.00008)"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,306.00008)"
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
@@ -479,20 +479,20 @@
        style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2.00001;stroke-dasharray:none"
        id="ellipse32"
        cx="251.5"
-       cy="234.15639"
+       cy="254.15639"
        rx="19.999994"
        ry="20" />
     <path
        id="path33"
-       d="m 251.5,215.15639 v 37.99999"
+       d="m 251.5,235.15639 v 37.99999"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        id="path34"
-       d="m 272.5,234.15637 h -42"
+       d="m 272.5,254.15638 h -42"
        style="fill:none;stroke:#ffffff;stroke-width:1.99999px" />
     <path
        id="path35"
-       d="m 251.5,255.15639 v 38"
+       d="m 251.5,275.15639 v 18"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
@@ -539,24 +539,24 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
-       transform="matrix(0,0.9062407,-0.96828119,0,303.34369,185.21939)"
+       transform="matrix(0,0.9062407,-0.96828119,0,303.34369,205.21854)"
        inkscape:transform-center-x="-1.1498321"
        inkscape:transform-center-y="-3.3529102e-06" />
     <path
        id="path40"
-       d="m 159.49995,233.15639 v 96.99998"
+       d="m 159.49995,253.15639 v 77"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        id="path41"
-       d="M 210.49998,234.15638 H 160.49995"
+       d="M 210.49998,254.15639 H 160.49995"
        style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
     <path
        id="path42"
-       d="M 384.5,274.15639 H 252.50044"
+       d="M 384.50001,194.15639 H 252.50044"
        style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
     <path
        id="path43"
-       d="M 385.50005,77.156392 V 275.15638"
+       d="M 385.50005,77.156392 V 195.15639"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        id="path44"
@@ -565,62 +565,62 @@
     <text
        x="17.94043"
        y="222.86049"
-       id="cfb-k4"
+       id="ofb-k4"
        inkscape:label="k4">aa</text>
     <text
        x="47.94043"
        y="222.86049"
-       id="cfb-k5"
+       id="ofb-k5"
        inkscape:label="k5">aa</text>
     <text
        x="77.94043"
        y="222.86049"
-       id="cfb-k6"
+       id="ofb-k6"
        inkscape:label="k6">aa</text>
     <text
        x="107.94043"
        y="222.86049"
-       id="cfb-k7"
+       id="ofb-k7"
        inkscape:label="k7">aa</text>
     <text
        x="17.94043"
        y="334.8605"
-       id="cfb-o4"
+       id="ofb-o4"
        inkscape:label="o4">aa</text>
     <text
        x="47.94043"
        y="334.8605"
-       id="cfb-o5"
+       id="ofb-o5"
        inkscape:label="o5">aa</text>
     <text
        x="77.94043"
        y="334.8605"
-       id="cfb-o6"
+       id="ofb-o6"
        inkscape:label="o6">aa</text>
     <text
        x="107.94043"
        y="334.8605"
-       id="cfb-o7"
+       id="ofb-o7"
        inkscape:label="o7">aa</text>
     <text
        x="205.94043"
        y="334.8605"
-       id="cfb-e4"
+       id="ofb-e4"
        inkscape:label="e4">aa</text>
     <text
        x="235.94043"
        y="334.8605"
-       id="cfb-e5"
+       id="ofb-e5"
        inkscape:label="e5">aa</text>
     <text
        x="265.94043"
        y="334.8605"
-       id="cfb-e6"
+       id="ofb-e6"
        inkscape:label="e6">aa</text>
     <text
        x="295.94043"
        y="334.8605"
-       id="cfb-e7"
+       id="ofb-e7"
        inkscape:label="e7">aa</text>
   </g>
   <g
@@ -703,7 +703,7 @@
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
        id="path66"
-       d="m 251.5,175.15639 v 18"
+       d="m 251.5,175.15639 v 38"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
@@ -720,7 +720,7 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
-       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,286.00008)"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,306.00008)"
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
@@ -734,20 +734,20 @@
        style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2.00001;stroke-dasharray:none"
        id="ellipse68"
        cx="251.5"
-       cy="234.15639"
+       cy="254.15639"
        rx="19.999994"
        ry="20" />
     <path
        id="path72"
-       d="m 251.5,215.15639 v 37.99999"
+       d="m 251.5,235.15639 v 37.99999"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        id="path73"
-       d="m 272.5,234.15637 h -42"
+       d="m 272.5,254.15638 h -42"
        style="fill:none;stroke:#ffffff;stroke-width:1.99999px" />
     <path
        id="path74"
-       d="m 251.5,255.15639 v 38"
+       d="m 251.5,275.15639 v 18"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
@@ -794,24 +794,24 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
-       transform="matrix(0,0.9062407,-0.96828119,0,303.34369,185.21939)"
+       transform="matrix(0,0.9062407,-0.96828119,0,303.34369,205.21854)"
        inkscape:transform-center-x="-1.1498321"
        inkscape:transform-center-y="-3.3529102e-06" />
     <path
        id="path79"
-       d="m 159.49995,233.15639 v 96.99998"
+       d="m 159.49995,253.15639 v 77"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        id="path80"
-       d="M 210.49998,234.15638 H 160.49995"
+       d="M 210.49998,254.15639 H 160.49995"
        style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
     <path
        id="path81"
-       d="M 384.49999,274.15638 H 252.5"
+       d="M 384.49998,194.15638 H 252.50009"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        id="path82"
-       d="M 385.50009,77.156401 V 275.15639"
+       d="M 385.50009,77.156401 V 195.15639"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        id="path83"
@@ -820,62 +820,62 @@
     <text
        x="17.94043"
        y="222.86049"
-       id="cfb-k8"
+       id="ofb-k8"
        inkscape:label="k8">aa</text>
     <text
        x="47.94043"
        y="222.86049"
-       id="cfb-k9"
+       id="ofb-k9"
        inkscape:label="k9">aa</text>
     <text
        x="77.94043"
        y="222.86049"
-       id="cfb-k10"
+       id="ofb-k10"
        inkscape:label="k10">aa</text>
     <text
        x="107.94043"
        y="222.86049"
-       id="cfb-k11"
+       id="ofb-k11"
        inkscape:label="k11">aa</text>
     <text
        x="17.94043"
        y="334.8605"
-       id="cfb-o8"
+       id="ofb-o8"
        inkscape:label="o8">aa</text>
     <text
        x="47.94043"
        y="334.8605"
-       id="cfb-o9"
+       id="ofb-o9"
        inkscape:label="o9">aa</text>
     <text
        x="77.94043"
        y="334.8605"
-       id="cfb-o10"
+       id="ofb-o10"
        inkscape:label="o10">aa</text>
     <text
        x="107.94043"
        y="334.8605"
-       id="cfb-o11"
+       id="ofb-o11"
        inkscape:label="o11">aa</text>
     <text
        x="205.94043"
        y="334.8605"
-       id="cfb-e8"
+       id="ofb-e8"
        inkscape:label="e8">aa</text>
     <text
        x="235.94043"
        y="334.8605"
-       id="cfb-e9"
+       id="ofb-e9"
        inkscape:label="e9">aa</text>
     <text
        x="265.94043"
        y="334.8605"
-       id="cfb-e10"
+       id="ofb-e10"
        inkscape:label="e10">aa</text>
     <text
        x="295.94043"
        y="334.8605"
-       id="cfb-e11"
+       id="ofb-e11"
        inkscape:label="e11">aa</text>
   </g>
   <g
@@ -958,7 +958,7 @@
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
        id="path104"
-       d="m 251.5,175.15639 v 18"
+       d="m 251.5,175.15639 v 38"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
@@ -975,7 +975,7 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
-       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,286.00008)"
+       transform="matrix(-0.9062407,0,0,-0.96828119,300.437,306.00008)"
        inkscape:transform-center-y="1.1498327"
        inkscape:transform-center-x="-2.3529102e-06" />
     <path
@@ -989,20 +989,20 @@
        style="fill:#ffffff;fill-opacity:0;stroke:#ffffff;stroke-width:2.00001;stroke-dasharray:none"
        id="ellipse106"
        cx="251.5"
-       cy="234.15639"
+       cy="254.15639"
        rx="19.999994"
        ry="20" />
     <path
        id="path107"
-       d="m 251.5,215.15639 v 37.99999"
+       d="m 251.5,235.15639 v 37.99999"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        id="path108"
-       d="m 272.5,234.15637 h -42"
+       d="m 272.5,254.15638 h -42"
        style="fill:none;stroke:#ffffff;stroke-width:1.99999px" />
     <path
        id="path109"
-       d="m 251.5,255.15639 v 38"
+       d="m 251.5,275.15639 v 18"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        sodipodi:type="star"
@@ -1049,76 +1049,76 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 54,79.5 4.113621,7.125 4.11362,7.125 -8.227241,0 -8.227241,0 4.11362,-7.125 z"
-       transform="matrix(0,0.9062407,-0.96828119,0,303.34369,185.21939)"
+       transform="matrix(0,0.9062407,-0.96828119,0,303.34369,205.21854)"
        inkscape:transform-center-x="-1.1498321"
        inkscape:transform-center-y="-3.3529102e-06" />
     <path
        id="path114"
-       d="m 159.49995,233.15639 v 96.99998"
+       d="m 159.49995,253.15639 v 77"
        style="fill:none;stroke:#ffffff;stroke-width:2px" />
     <path
        id="path115"
-       d="M 210.49998,234.15638 H 160.49995"
+       d="M 210.49998,254.15639 H 160.49995"
        style="fill:none;stroke:#ffffff;stroke-width:2.00001px" />
     <text
        x="17.94043"
        y="222.86049"
-       id="cfb-k12"
+       id="ofb-k12"
        inkscape:label="k12">aa</text>
     <text
        x="47.94043"
        y="222.86049"
-       id="cfb-k13"
+       id="ofb-k13"
        inkscape:label="k13">aa</text>
     <text
        x="77.94043"
        y="222.86049"
-       id="cfb-k14"
+       id="ofb-k14"
        inkscape:label="k14">aa</text>
     <text
        x="107.94043"
        y="222.86049"
-       id="cfb-k15"
+       id="ofb-k15"
        inkscape:label="k15">aa</text>
     <text
        x="17.94043"
        y="334.8605"
-       id="cfb-o12"
+       id="ofb-o12"
        inkscape:label="o12">aa</text>
     <text
        x="47.94043"
        y="334.8605"
-       id="cfb-o13"
+       id="ofb-o13"
        inkscape:label="o13">aa</text>
     <text
        x="77.94043"
        y="334.8605"
-       id="cfb-o14"
+       id="ofb-o14"
        inkscape:label="o14">aa</text>
     <text
        x="107.94043"
        y="334.8605"
-       id="cfb-o15"
+       id="ofb-o15"
        inkscape:label="o15">aa</text>
     <text
        x="205.94043"
        y="334.8605"
-       id="cfb-e12"
+       id="ofb-e12"
        inkscape:label="e12">aa</text>
     <text
        x="235.94043"
        y="334.8605"
-       id="cfb-e13"
+       id="ofb-e13"
        inkscape:label="e13">aa</text>
     <text
        x="265.94043"
        y="334.8605"
-       id="cfb-e14"
+       id="ofb-e14"
        inkscape:label="e14">aa</text>
     <text
        x="295.94043"
        y="334.8605"
-       id="cfb-e15"
+       id="ofb-e15"
        inkscape:label="e15">aa</text>
   </g>
 </svg>

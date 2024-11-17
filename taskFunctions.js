@@ -62,10 +62,29 @@ function resizeTask() {
 }
 
 // Encryption tasks
-function encryptionTask() {
+
+function loadEncryptionTask() {
+    var variant = document.getElementById("encryption-select").value;
+
+    if (variant == 1) {
+        document.getElementById('cfb-svg').style.display = "none";
+        document.getElementById('ofb-svg').style.display = "none";
+        document.getElementById('cbc-svg').style.display = "block";
+    } else if (variant == 2) {
+        document.getElementById('cbc-svg').style.display = "none";
+        document.getElementById('ofb-svg').style.display = "none";
+        document.getElementById('cfb-svg').style.display = "block";
+    } else if (variant == 3) {
+        document.getElementById('ofb-svg').style.display = "block";
+        document.getElementById('cbc-svg').style.display = "none";
+        document.getElementById('cfb-svg').style.display = "none";
+    }
+}
+
+function ecbEncryptionTask() {
     var key = [];
     for (var i = 0; i < 4; i += 1) {
-        key.push(document.getElementById('encryption-task-key-' + i).value);
+        key.push(document.getElementById('ecb-task-key-' + i).value);
     }
 
     for (var i = 0; i < 16; i += 4) {
@@ -77,18 +96,163 @@ function encryptionTask() {
 
     var data = [];
     for (var i = 0; i < 16; i += 1) {
-        data.push(document.getElementById('encryption-task-data-' + (i)).value.slice(2));
+        data.push(document.getElementById('ecb-task-data-' + (i)).value.slice(2));
         document.getElementById('ecb-o' + i).innerHTML = data[i];
     }
-
-    console.log(data);
-    console.log(key);
 
     for (var i = 0; i < 16; i += 4) {
         document.getElementById('ecb-e' + i).innerHTML = (parseInt(key[0], 16) ^ parseInt(data[i], 16)).toString(16);
         document.getElementById('ecb-e' + (i + 1)).innerHTML = (parseInt(key[1], 16) ^ parseInt(data[i + 1], 16)).toString(16);
         document.getElementById('ecb-e' + (i + 2)).innerHTML = (parseInt(key[2], 16) ^ parseInt(data[i + 2], 16)).toString(16);
         document.getElementById('ecb-e' + (i + 3)).innerHTML = (parseInt(key[3], 16) ^ parseInt(data[i + 3], 16)).toString(16);
+    }
+}
+
+function cbcCfbOfbEncryptionTask() {
+    var key = [];
+    for (var i = 0; i < 4; i += 1) {
+        key.push(document.getElementById('cbc-cfb-ofb-task-key-' + i).value);
+    }
+
+    for (var i = 0; i < 16; i += 4) {
+        document.getElementById('cbc-k' + i).innerHTML = key[0].slice(2);
+        document.getElementById('cfb-k' + i).innerHTML = key[0].slice(2);
+        document.getElementById('ofb-k' + i).innerHTML = key[0].slice(2);
+
+        document.getElementById('cbc-k' + (i + 1)).innerHTML = key[1].slice(2);
+        document.getElementById('cfb-k' + (i + 1)).innerHTML = key[1].slice(2);
+        document.getElementById('ofb-k' + (i + 1)).innerHTML = key[1].slice(2);
+
+        document.getElementById('cbc-k' + (i + 2)).innerHTML = key[2].slice(2);
+        document.getElementById('cfb-k' + (i + 2)).innerHTML = key[2].slice(2);
+        document.getElementById('ofb-k' + (i + 2)).innerHTML = key[2].slice(2);
+
+        document.getElementById('cbc-k' + (i + 3)).innerHTML = key[3].slice(2);
+        document.getElementById('cfb-k' + (i + 3)).innerHTML = key[3].slice(2);
+        document.getElementById('ofb-k' + (i + 3)).innerHTML = key[3].slice(2);
+    }
+
+    var iv = [];
+    for (var i = 0; i < 4; i += 1) {
+        iv.push(document.getElementById('cbc-cfb-ofb-task-iv-' + i).value);
+    }
+
+    {
+        document.getElementById('cbc-i0').innerHTML = iv[0].slice(2);
+        document.getElementById('cfb-i0').innerHTML = iv[0].slice(2);
+        document.getElementById('ofb-i0').innerHTML = iv[0].slice(2);
+
+        document.getElementById('cbc-i1').innerHTML = iv[1].slice(2);
+        document.getElementById('cfb-i1').innerHTML = iv[1].slice(2);
+        document.getElementById('ofb-i1').innerHTML = iv[1].slice(2);
+
+        document.getElementById('cbc-i2').innerHTML = iv[2].slice(2);
+        document.getElementById('cfb-i2').innerHTML = iv[2].slice(2);
+        document.getElementById('ofb-i2').innerHTML = iv[2].slice(2);
+
+        document.getElementById('cbc-i3').innerHTML = iv[3].slice(2);
+        document.getElementById('cfb-i3').innerHTML = iv[3].slice(2);
+        document.getElementById('ofb-i3').innerHTML = iv[3].slice(2);
+    }
+
+    var data = [];
+    for (var i = 0; i < 16; i += 1) {
+        data.push(document.getElementById('cbc-cfb-ofb-task-data-' + (i)).value.slice(2));
+        document.getElementById('cbc-o' + i).innerHTML = data[i];
+        document.getElementById('cfb-o' + i).innerHTML = data[i];
+        document.getElementById('ofb-o' + i).innerHTML = data[i];
+    }
+
+    cbcCfbIv = iv;
+    for (var i = 0; i < 16; i += 4) {
+        tmpVec = [];
+        tmpVec.push((parseInt(key[0], 16) ^ parseInt(cbcCfbIv[0], 16) ^ parseInt(data[i], 16)).toString(16));
+        tmpVec.push((parseInt(key[1], 16) ^ parseInt(cbcCfbIv[1], 16) ^ parseInt(data[i + 1], 16)).toString(16));
+        tmpVec.push((parseInt(key[2], 16) ^ parseInt(cbcCfbIv[2], 16) ^ parseInt(data[i + 2], 16)).toString(16));
+        tmpVec.push((parseInt(key[3], 16) ^ parseInt(cbcCfbIv[3], 16) ^ parseInt(data[i + 3], 16)).toString(16));
+    
+        document.getElementById('cbc-e' + i).innerHTML = tmpVec[0];
+        document.getElementById('cfb-e' + i).innerHTML = tmpVec[0];
+
+        document.getElementById('cbc-e' + (i + 1)).innerHTML = tmpVec[1];
+        document.getElementById('cfb-e' + (i + 1)).innerHTML = tmpVec[1];
+    
+        document.getElementById('cbc-e' + (i + 2)).innerHTML = tmpVec[2];
+        document.getElementById('cfb-e' + (i + 2)).innerHTML = tmpVec[2];
+
+        document.getElementById('cbc-e' + (i + 3)).innerHTML = tmpVec[3];
+        document.getElementById('cfb-e' + (i + 3)).innerHTML = tmpVec[3];
+        cbcCfbIv = tmpVec;
+    }
+
+    ofbIv = iv;
+    for (var i = 0; i < 16; i += 4) {
+        tmpVec = [];
+        tmpVec.push((parseInt(key[0], 16) ^ parseInt(ofbIv[0], 16)).toString(16));
+        tmpVec.push((parseInt(key[1], 16) ^ parseInt(ofbIv[1], 16)).toString(16));
+        tmpVec.push((parseInt(key[2], 16) ^ parseInt(ofbIv[2], 16)).toString(16));
+        tmpVec.push((parseInt(key[3], 16) ^ parseInt(ofbIv[3], 16)).toString(16));
+        ofbIv = tmpVec;
+
+        document.getElementById('ofb-e' + i).innerHTML = (parseInt(ofbIv[0], 16) ^ parseInt(data[i], 16)).toString(16);
+        document.getElementById('ofb-e' + (i + 1)).innerHTML = (parseInt(ofbIv[1], 16) ^ parseInt(data[i + 1], 16)).toString(16);
+        document.getElementById('ofb-e' + (i + 2)).innerHTML = (parseInt(ofbIv[2], 16) ^ parseInt(data[i + 2], 16)).toString(16);
+        document.getElementById('ofb-e' + (i + 3)).innerHTML = (parseInt(ofbIv[3], 16) ^ parseInt(data[i + 3], 16)).toString(16);
+    }
+}
+
+function ctrEncryptionTask() {
+    var variant = document.getElementById("ctr-select").value;
+
+    var ctr = [];
+    for (var i = 0; i < 16; i++) {
+        document.getElementById('ctr-c' + i).innerHTML = 0;
+        ctr.push(0);
+    }
+
+    if (variant == 1) {
+        document.getElementById('ctr-c3').innerHTML = 1;
+        document.getElementById('ctr-c7').innerHTML = 2;
+        document.getElementById('ctr-c11').innerHTML = 3;
+        document.getElementById('ctr-c15').innerHTML = 4;
+        ctr[3] = 1;
+        ctr[7] = 2;
+        ctr[11] = 3;
+        ctr[15] = 4;
+    } else if (variant == 2) {
+        document.getElementById('ctr-c3').innerHTML = 2;
+        document.getElementById('ctr-c7').innerHTML = 4;
+        document.getElementById('ctr-c11').innerHTML = 8;
+        document.getElementById('ctr-c15').innerHTML = 10;
+        ctr[3] = 2;
+        ctr[7] = 4;
+        ctr[11] = 8;
+        ctr[15] = 10;
+    }
+
+    var key = [];
+    for (var i = 0; i < 4; i += 1) {
+        key.push(document.getElementById('ctr-task-key-' + i).value);
+    }
+
+    for (var i = 0; i < 16; i += 4) {
+        document.getElementById('ctr-k' + i).innerHTML = key[0].slice(2);
+        document.getElementById('ctr-k' + (i + 1)).innerHTML = key[1].slice(2);
+        document.getElementById('ctr-k' + (i + 2)).innerHTML = key[2].slice(2);
+        document.getElementById('ctr-k' + (i + 3)).innerHTML = key[3].slice(2);
+    }
+
+    var data = [];
+    for (var i = 0; i < 16; i += 1) {
+        data.push(document.getElementById('ctr-task-data-' + (i)).value.slice(2));
+        document.getElementById('ctr-o' + i).innerHTML = data[i];
+    }
+
+    for (var i = 0; i < 16; i += 4) {
+        document.getElementById('ctr-e' + i).innerHTML = (parseInt(key[0], 16) ^ parseInt(ctr[i], 16) ^parseInt(data[i], 16)).toString(16);
+        document.getElementById('ctr-e' + (i + 1)).innerHTML = (parseInt(key[1], 16) ^ parseInt(ctr[i + 1], 16) ^ parseInt(data[i + 1], 16)).toString(16);
+        document.getElementById('ctr-e' + (i + 2)).innerHTML = (parseInt(key[2], 16) ^ parseInt(ctr[i + 2], 16) ^parseInt(data[i + 2], 16)).toString(16);
+        document.getElementById('ctr-e' + (i + 3)).innerHTML = (parseInt(key[3], 16) ^ parseInt(ctr[i + 3], 16) ^parseInt(data[i + 3], 16)).toString(16);
     }
 }
 

@@ -24,15 +24,15 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="2"
-     inkscape:cx="343"
-     inkscape:cy="152.75"
+     inkscape:zoom="4"
+     inkscape:cx="568.75"
+     inkscape:cy="183.875"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg7"
+     inkscape:current-layer="g163"
      showgrid="true"
      showguides="false">
     <inkscape:grid
@@ -54,7 +54,7 @@
        snapvisiblegridlinesonly="true" />
   </sodipodi:namedview>
   <title
-     id="title1">Шифрование в режиме электронной кодовой книги</title>
+     id="title1">Шифрование в режиме CTR</title>
   <style
      type="text/css"
      id="style1">
@@ -261,99 +261,99 @@
     <text
        x="-747.05957"
        y="61.704102"
-       id="text3-5"
-       inkscape:label="k1"
+       id="ctr-k0"
+       inkscape:label="k0"
        style="fill:#ffffff;stroke:none;stroke-width:2px;font-size:22px;font-family:Helvetica;text-anchor:middle"
        transform="translate(765,5.1563873)">aa</text>
     <text
        x="47.94043"
        y="66.860489"
-       id="text7"
-       inkscape:label="k2"
+       id="ctr-k1"
+       inkscape:label="k1"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="77.94043"
        y="66.860489"
-       id="text8"
-       inkscape:label="k3"
+       id="ctr-k2"
+       inkscape:label="k2"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="107.94043"
        y="66.860489"
-       id="text9"
-       inkscape:label="k4"
+       id="ctr-k3"
+       inkscape:label="k3"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="205.94043"
        y="66.860489"
-       id="text10"
-       inkscape:label="c1"
+       id="ctr-c0"
+       inkscape:label="c0"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="235.94043"
        y="66.860489"
-       id="text11"
-       inkscape:label="c2"
+       id="ctr-c1"
+       inkscape:label="c1"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="265.94043"
        y="66.860489"
-       id="text12"
-       inkscape:label="c3"
+       id="ctr-c2"
+       inkscape:label="c2"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="295.94043"
        y="66.860489"
-       id="text14"
-       inkscape:label="c4"
+       id="ctr-c3"
+       inkscape:label="c3"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="17.94043"
        y="239.86049"
-       id="text15"
-       inkscape:label="o1"
+       id="ctr-o0"
+       inkscape:label="o0"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="47.94043"
        y="239.86049"
-       id="text16"
-       inkscape:label="o2"
+       id="ctr-o1"
+       inkscape:label="o1"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="77.94043"
        y="239.86049"
-       id="text17"
-       inkscape:label="o3"
+       id="ctr-o2"
+       inkscape:label="o2"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="107.94043"
        y="239.86049"
-       id="text18"
-       inkscape:label="o4"
+       id="ctr-o3"
+       inkscape:label="o3"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="205.94043"
        y="334.8605"
-       id="text19"
-       inkscape:label="e1"
+       id="ctr-e0"
+       inkscape:label="e0"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="235.94043"
        y="334.8605"
-       id="text20"
-       inkscape:label="e2"
+       id="ctr-e1"
+       inkscape:label="e1"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="265.94043"
        y="334.8605"
-       id="text21"
-       inkscape:label="e3"
+       id="ctr-e2"
+       inkscape:label="e2"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="295.94043"
        y="334.8605"
-       id="text23"
-       inkscape:label="e4"
+       id="ctr-e3"
+       inkscape:label="e3"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
   </g>
   <metadata
@@ -549,99 +549,99 @@
     <text
        x="-747.05957"
        y="61.704102"
-       id="text80"
-       inkscape:label="k5"
+       id="ctr-k4"
+       inkscape:label="k4"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px"
        transform="translate(765,5.1563873)">aa</text>
     <text
        x="47.94043"
        y="66.860489"
-       id="text81"
-       inkscape:label="k6"
+       id="ctr-k5"
+       inkscape:label="k5"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="77.94043"
        y="66.860489"
-       id="text82"
-       inkscape:label="k7"
+       id="ctr-k6"
+       inkscape:label="k6"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="107.94043"
        y="66.860489"
-       id="text83"
-       inkscape:label="k8"
+       id="ctr-k7"
+       inkscape:label="k7"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="205.94043"
        y="66.860489"
-       id="text84"
-       inkscape:label="c5"
+       id="ctr-c4"
+       inkscape:label="c4"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="235.94043"
        y="66.860489"
-       id="text85"
-       inkscape:label="c6"
+       id="ctr-c5"
+       inkscape:label="c5"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="265.94043"
        y="66.860489"
-       id="text86"
-       inkscape:label="c7"
+       id="ctr-c6"
+       inkscape:label="c6"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="295.94043"
        y="66.860489"
-       id="text87"
-       inkscape:label="c8"
+       id="ctr-c7"
+       inkscape:label="c7"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="17.94043"
        y="239.86049"
-       id="text88"
-       inkscape:label="o5"
+       id="ctr-o4"
+       inkscape:label="o4"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="47.94043"
        y="239.86049"
-       id="text89"
-       inkscape:label="o6"
+       id="ctr-o5"
+       inkscape:label="o5"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="77.94043"
        y="239.86049"
-       id="text90"
+       id="ctr-o6"
        inkscape:label="o7"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="107.94043"
        y="239.86049"
-       id="text91"
-       inkscape:label="o8"
+       id="ctr-o7"
+       inkscape:label="o7"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="205.94043"
        y="334.8605"
-       id="text92"
-       inkscape:label="e5"
+       id="ctr-e4"
+       inkscape:label="e4"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="235.94043"
        y="334.8605"
-       id="text93"
-       inkscape:label="e6"
+       id="ctr-e5"
+       inkscape:label="e5"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="265.94043"
        y="334.8605"
-       id="text94"
-       inkscape:label="e7"
+       id="ctr-e6"
+       inkscape:label="e6"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="295.94043"
        y="334.8605"
-       id="text95"
-       inkscape:label="e8"
+       id="ctr-e7"
+       inkscape:label="e7"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
   </g>
   <g
@@ -828,99 +828,99 @@
     <text
        x="-747.05957"
        y="61.704102"
-       id="text114"
-       inkscape:label="k9"
+       id="ctr-k8"
+       inkscape:label="k8"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px"
        transform="translate(765,5.1563873)">aa</text>
     <text
        x="47.94043"
        y="66.860489"
-       id="text115"
-       inkscape:label="k10"
+       id="ctr-k9"
+       inkscape:label="k9"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="77.94043"
        y="66.860489"
-       id="text116"
-       inkscape:label="k11"
+       id="ctr-k10"
+       inkscape:label="k10"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="107.94043"
        y="66.860489"
-       id="text117"
-       inkscape:label="k12"
+       id="ctr-k11"
+       inkscape:label="k11"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="205.94043"
        y="66.860489"
-       id="text118"
-       inkscape:label="c9"
+       id="ctr-c8"
+       inkscape:label="c8"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="235.94043"
        y="66.860489"
-       id="text119"
-       inkscape:label="c10"
+       id="ctr-c9"
+       inkscape:label="c9"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="265.94043"
        y="66.860489"
-       id="text120"
-       inkscape:label="c11"
+       id="ctr-c10"
+       inkscape:label="c10"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="295.94043"
        y="66.860489"
-       id="text121"
-       inkscape:label="c12"
+       id="ctr-c11"
+       inkscape:label="c11"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="17.94043"
        y="239.86049"
-       id="text122"
-       inkscape:label="o9"
+       id="ctr-o8"
+       inkscape:label="o8"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="47.94043"
        y="239.86049"
-       id="text123"
-       inkscape:label="o10"
+       id="ctr-o9"
+       inkscape:label="o9"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="77.94043"
        y="239.86049"
-       id="text124"
-       inkscape:label="o11"
+       id="ctr-o10"
+       inkscape:label="o10"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="107.94043"
        y="239.86049"
-       id="text125"
-       inkscape:label="o12"
+       id="ctr-o11"
+       inkscape:label="o11"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="205.94043"
        y="334.8605"
-       id="text126"
-       inkscape:label="e9"
+       id="ctr-e8"
+       inkscape:label="e8"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="235.94043"
        y="334.8605"
-       id="text127"
-       inkscape:label="e10"
+       id="ctr-e9"
+       inkscape:label="e9"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="265.94043"
        y="334.8605"
-       id="text128"
-       inkscape:label="e11"
+       id="ctr-e10"
+       inkscape:label="e10"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="295.94043"
        y="334.8605"
-       id="text129"
-       inkscape:label="e12"
+       id="ctr-e11"
+       inkscape:label="e11"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
   </g>
   <g
@@ -1107,99 +1107,99 @@
     <text
        x="-747.05957"
        y="61.704102"
-       id="text148"
-       inkscape:label="k13"
+       id="ctr-k12"
+       inkscape:label="k12"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px"
        transform="translate(765,5.1563873)">aa</text>
     <text
        x="47.94043"
        y="66.860489"
-       id="text149"
-       inkscape:label="k14"
+       id="ctr-k13"
+       inkscape:label="k13"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="77.94043"
        y="66.860489"
-       id="text150"
-       inkscape:label="k15"
+       id="ctr-k14"
+       inkscape:label="k14"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="107.94043"
        y="66.860489"
-       id="text151"
-       inkscape:label="k16"
+       id="ctr-k15"
+       inkscape:label="k15"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="205.94043"
        y="66.860489"
-       id="text152"
-       inkscape:label="c13"
+       id="ctr-c12"
+       inkscape:label="c12"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="235.94043"
        y="66.860489"
-       id="text153"
-       inkscape:label="c14"
+       id="ctr-c13"
+       inkscape:label="c13"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="265.94043"
        y="66.860489"
-       id="text154"
-       inkscape:label="c15"
+       id="ctr-c14"
+       inkscape:label="c14"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="295.94043"
        y="66.860489"
-       id="text155"
-       inkscape:label="c16"
+       id="ctr-c15"
+       inkscape:label="c15"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="17.94043"
        y="239.86049"
-       id="text156"
-       inkscape:label="o13"
+       id="ctr-o12"
+       inkscape:label="o12"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="47.94043"
        y="239.86049"
-       id="text157"
-       inkscape:label="o14"
+       id="ctr-o13"
+       inkscape:label="o13"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="77.94043"
        y="239.86049"
-       id="text158"
-       inkscape:label="o15"
+       id="ctr-o14"
+       inkscape:label="o14"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="107.94043"
        y="239.86049"
-       id="text159"
-       inkscape:label="o16"
+       id="ctr-o15"
+       inkscape:label="o15"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="205.94043"
        y="334.8605"
-       id="text160"
-       inkscape:label="e13"
+       id="ctr-e12"
+       inkscape:label="e12"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="235.94043"
        y="334.8605"
-       id="text161"
-       inkscape:label="e14"
+       id="ctr-e13"
+       inkscape:label="e13"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="265.94043"
        y="334.8605"
-       id="text162"
-       inkscape:label="e15"
+       id="ctr-e14"
+       inkscape:label="e14"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
     <text
        x="295.94043"
        y="334.8605"
-       id="text163"
-       inkscape:label="e16"
+       id="ctr-e15"
+       inkscape:label="e15"
        style="font-size:22px;font-family:Helvetica;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:2px">aa</text>
   </g>
 </svg>
